@@ -17,12 +17,7 @@ const EXAM_DATA = {
     //     description: "Subject description",
     //     externalLink: "https://your-repo-url.com/subject-exam.html"
     // }
-        test: {
-         id: "test",
-       name: "Stest",
-        description: "Subject description",
-        externalLink: "https://zplusbank.github.io/test1/"
-     },
+
     java: {
        id: "java",
        name: "OOP2",
@@ -229,5 +224,6 @@ function escapeHtml(text) {
         .replace(/"/g, "&quot;")
         .replace(/'/g, "&#039;");
 }
+
 
 
