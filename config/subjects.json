@@ -1,0 +1,8 @@
+[
+    {
+        "id": "programming",
+        "name": "Programming",
+        "description": "Master C++, Java, Python, and foundational algorithms.",
+        "baseUrl": "../exams-programming/"
+    }
+]
