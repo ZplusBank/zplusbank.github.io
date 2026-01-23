@@ -10,20 +10,21 @@ import { calculateScore } from './evaluator.js';
 // Subject data - each subject redirects to a separate HTML repository
 // Add your subjects here with their external links
 const EXAM_DATA = {
-    // Example structure (remove or modify as needed):
-    // subjectId: {
-    //     id: "subjectId",
-    //     name: "Subject Name",
-    //     description: "Subject description",
-    //     externalLink: "https://your-repo-url.com/subject-exam.html"
-    // }
 
     java: {
-       id: "java",
-       name: "OOP2",
-        description: "Chapter 17 questions",
-        externalLink: "https://ibdx.github.io/javaOOP17/"
+        "id": "java",
+        "name": "OOP2",
+        "description": "Chapter 17 questions",
+        "externalLink": "https://ibdx.github.io/javaOOP17/"
+    },
+    java2: {
+        "id": "java2",
+        "name": "Java 2",
+        "description": "Java 2 questions",
+        "externalLink": "https://zplusbank.github.io/it/"
     }
+
+
 };
 
 // State
