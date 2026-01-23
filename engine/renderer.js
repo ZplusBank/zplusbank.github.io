@@ -17,12 +17,6 @@ const EXAM_DATA = {
     //     description: "Subject description",
     //     externalLink: "https://your-repo-url.com/subject-exam.html"
     // }
-        test: {
-        id: "test",
-        name: "test",
-        description: "Subject description",
-         externalLink: "https://zplusbank.github.io/testTemplates/"
-     }
 };
 
 // State
@@ -223,6 +217,3 @@ function escapeHtml(text) {
         .replace(/"/g, "&quot;")
         .replace(/'/g, "&#039;");
 }
-
-
-
