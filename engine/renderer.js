@@ -22,7 +22,13 @@ const EXAM_DATA = {
        name: "Stest",
         description: "Subject description",
         externalLink: "https://zplusbank.github.io/test1/"
-     }
+     },
+    java: {
+       id: "java",
+       name: "OOP2",
+        description: "Chapter 17 questions",
+        externalLink: "https://ibdx.github.io/javaOOP17/"
+    }
 };
 
 // State
@@ -223,4 +229,5 @@ function escapeHtml(text) {
         .replace(/"/g, "&quot;")
         .replace(/'/g, "&#039;");
 }
+
 
