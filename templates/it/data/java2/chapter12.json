@@ -1,0 +1,1548 @@
+{
+  "id": "task-3",
+  "label": "chapter=12, username=liang12e",
+  "params": {
+    "chapter": "12",
+    "username": "liang12e"
+  },
+  "title": "Chapter 12 Exception Handling and Text I/O",
+  "questions": [
+    {
+      "id": "12.1",
+      "number": "12.1",
+      "text": "&nbsp; The following code causes Java to throw _________.<br><span style=\"font-family:monospace; font-size: 109%;\"><br><span class=\"keyword\">int</span>&nbsp;number&nbsp;=&nbsp;Integer.MAX_VALUE&nbsp;+&nbsp;<span class=\"constant\">1</span>;<br></span>",
+      "choices": [
+        {
+          "value": "A",
+          "label": "A",
+          "text": "RuntimeException"
+        },
+        {
+          "value": "B",
+          "label": "B",
+          "text": "Exception"
+        },
+        {
+          "value": "C",
+          "label": "C",
+          "text": "Error"
+        },
+        {
+          "value": "D",
+          "label": "D",
+          "text": "Throwable"
+        },
+        {
+          "value": "E",
+          "label": "E",
+          "text": "no exceptions"
+        }
+      ],
+      "inputName": "Q0",
+      "inputType": "radio",
+      "correctAnswer": "E"
+    },
+    {
+      "id": "12.2",
+      "number": "12.2",
+      "text": "&nbsp; What exception type does the following program throw?<br><span style=\"font-family:monospace; font-size: 109%;\"><br><span class=\"keyword\">public</span>&nbsp;<span class=\"keyword\">class</span>&nbsp;Test&nbsp;{<br>&nbsp;&nbsp;<span class=\"keyword\">public</span> <span class=\"keyword\">static</span> <span class=\"keyword\">void</span> main(String[] args) {<br>&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<span class=\"constant\">1</span> / <span class=\"constant\">0</span>);<br>&nbsp;&nbsp;}<br>}<br></span>",
+      "choices": [
+        {
+          "value": "A",
+          "label": "A",
+          "text": "ArithmeticException"
+        },
+        {
+          "value": "B",
+          "label": "B",
+          "text": "ArrayIndexOutOfBoundsException"
+        },
+        {
+          "value": "C",
+          "label": "C",
+          "text": "StringIndexOutOfBoundsException"
+        },
+        {
+          "value": "D",
+          "label": "D",
+          "text": "ClassCastException"
+        },
+        {
+          "value": "E",
+          "label": "E",
+          "text": "No exception"
+        }
+      ],
+      "inputName": "Q1",
+      "inputType": "radio",
+      "correctAnswer": "A"
+    },
+    {
+      "id": "12.3",
+      "number": "12.3",
+      "text": "&nbsp; A Java exception is an instance of __________.<br>",
+      "choices": [
+        {
+          "value": "A",
+          "label": "A",
+          "text": "RuntimeException"
+        },
+        {
+          "value": "B",
+          "label": "B",
+          "text": "Exception"
+        },
+        {
+          "value": "C",
+          "label": "C",
+          "text": "Error"
+        },
+        {
+          "value": "D",
+          "label": "D",
+          "text": "Throwable"
+        },
+        {
+          "value": "E",
+          "label": "E",
+          "text": "NumberFormatException"
+        }
+      ],
+      "inputName": "Q2",
+      "inputType": "radio",
+      "correctAnswer": "D"
+    },
+    {
+      "id": "12.4",
+      "number": "12.4",
+      "text": "&nbsp; An instance of _________ describes system errors. If this type of error occurs, there is little you can do beyond notifying the user and trying to terminate the program gracefully.<br>",
+      "choices": [
+        {
+          "value": "A",
+          "label": "A",
+          "text": "RuntimeException"
+        },
+        {
+          "value": "B",
+          "label": "B",
+          "text": "Exception"
+        },
+        {
+          "value": "C",
+          "label": "C",
+          "text": "Error"
+        },
+        {
+          "value": "D",
+          "label": "D",
+          "text": "Throwable"
+        },
+        {
+          "value": "E",
+          "label": "E",
+          "text": "NumberFormatException"
+        }
+      ],
+      "inputName": "Q3",
+      "inputType": "radio",
+      "correctAnswer": "C"
+    },
+    {
+      "id": "12.5",
+      "number": "12.5",
+      "text": "&nbsp; An instance of _________ describes the errors caused by your program and external circumstances. These errors can be caught and handled by your program.<br>",
+      "choices": [
+        {
+          "value": "A",
+          "label": "A",
+          "text": "RuntimeException"
+        },
+        {
+          "value": "B",
+          "label": "B",
+          "text": "Exception"
+        },
+        {
+          "value": "C",
+          "label": "C",
+          "text": "Error"
+        },
+        {
+          "value": "D",
+          "label": "D",
+          "text": "Throwable"
+        },
+        {
+          "value": "E",
+          "label": "E",
+          "text": "NumberFormatException"
+        }
+      ],
+      "inputName": "Q4",
+      "inputType": "radio",
+      "correctAnswer": "B"
+    },
+    {
+      "id": "12.6",
+      "number": "12.6",
+      "text": "&nbsp; Instances of _________ are unchecked exceptions. Please select all that apply.<br>",
+      "choices": [
+        {
+          "value": "A",
+          "label": "A",
+          "text": "RuntimeException"
+        },
+        {
+          "value": "B",
+          "label": "B",
+          "text": "Exception"
+        },
+        {
+          "value": "C",
+          "label": "C",
+          "text": "Error"
+        },
+        {
+          "value": "D",
+          "label": "D",
+          "text": "Throwable"
+        },
+        {
+          "value": "E",
+          "label": "E",
+          "text": "NumberFormatException"
+        }
+      ],
+      "inputName": "QE5",
+      "inputType": "checkbox",
+      "correctAnswer": "ACE"
+    },
+    {
+      "id": "12.7",
+      "number": "12.7",
+      "text": "&nbsp; What exception type does the following program throw?<br><span style=\"font-family:monospace; font-size: 109%;\"><br><span class=\"keyword\">public</span>&nbsp;<span class=\"keyword\">class</span>&nbsp;Test&nbsp;{<br>&nbsp;&nbsp;<span class=\"keyword\">public</span> <span class=\"keyword\">static</span> <span class=\"keyword\">void</span> main(String[] args) {<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">int</span>[] list = <span class=\"keyword\">new</span> <span class=\"keyword\">int</span>[<span class=\"constant\">5</span>];<br>&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(list[<span class=\"constant\">5</span>]);<br>&nbsp;&nbsp;}<br>}<br></span>",
+      "choices": [
+        {
+          "value": "A",
+          "label": "A",
+          "text": "ArithmeticException"
+        },
+        {
+          "value": "B",
+          "label": "B",
+          "text": "ArrayIndexOutOfBoundsException"
+        },
+        {
+          "value": "C",
+          "label": "C",
+          "text": "StringIndexOutOfBoundsException"
+        },
+        {
+          "value": "D",
+          "label": "D",
+          "text": "ClassCastException"
+        },
+        {
+          "value": "E",
+          "label": "E",
+          "text": "No exception"
+        }
+      ],
+      "inputName": "Q6",
+      "inputType": "radio",
+      "correctAnswer": "B"
+    },
+    {
+      "id": "12.8",
+      "number": "12.8",
+      "text": "&nbsp; What exception type does the following program throw?<br><span style=\"font-family:monospace; font-size: 109%;\"><br><span class=\"keyword\">public</span>&nbsp;<span class=\"keyword\">class</span>&nbsp;Test&nbsp;{<br>&nbsp;&nbsp;<span class=\"keyword\">public</span> <span class=\"keyword\">static</span> <span class=\"keyword\">void</span> main(String[] args) {<br>&nbsp;&nbsp;&nbsp;&nbsp;String s = <span class=\"literal\">\"abc\"</span>;<br>&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(s.charAt(<span class=\"constant\">3</span>));<br>&nbsp;&nbsp;}<br>}<br></span>",
+      "choices": [
+        {
+          "value": "A",
+          "label": "A",
+          "text": "ArithmeticException"
+        },
+        {
+          "value": "B",
+          "label": "B",
+          "text": "ArrayIndexOutOfBoundsException"
+        },
+        {
+          "value": "C",
+          "label": "C",
+          "text": "StringIndexOutOfBoundsException"
+        },
+        {
+          "value": "D",
+          "label": "D",
+          "text": "ClassCastException"
+        },
+        {
+          "value": "E",
+          "label": "E",
+          "text": "No exception"
+        }
+      ],
+      "inputName": "Q7",
+      "inputType": "radio",
+      "correctAnswer": "C"
+    },
+    {
+      "id": "12.9",
+      "number": "12.9",
+      "text": "&nbsp; A method must declare to throw ________.<br>",
+      "choices": [
+        {
+          "value": "A",
+          "label": "A",
+          "text": "unchecked exceptions"
+        },
+        {
+          "value": "B",
+          "label": "B",
+          "text": "checked exceptions"
+        },
+        {
+          "value": "C",
+          "label": "C",
+          "text": "Error"
+        },
+        {
+          "value": "D",
+          "label": "D",
+          "text": "RuntimeException"
+        }
+      ],
+      "inputName": "Q8",
+      "inputType": "radio",
+      "correctAnswer": "B"
+    },
+    {
+      "id": "12.10",
+      "number": "12.10",
+      "text": "&nbsp; What exception type does the following program throw?<br><span style=\"font-family:monospace; font-size: 109%;\"><br><span class=\"keyword\">public</span>&nbsp;<span class=\"keyword\">class</span>&nbsp;Test&nbsp;{<br>&nbsp;&nbsp;<span class=\"keyword\">public</span> <span class=\"keyword\">static</span> <span class=\"keyword\">void</span> main(String[] args) {<br>&nbsp;&nbsp;&nbsp;&nbsp;Object o = <span class=\"keyword\">null</span>;<br>&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(o.toString());<br>&nbsp;&nbsp;}<br>}<br></span>",
+      "choices": [
+        {
+          "value": "A",
+          "label": "A",
+          "text": "ArithmeticException"
+        },
+        {
+          "value": "B",
+          "label": "B",
+          "text": "ArrayIndexOutOfBoundsException"
+        },
+        {
+          "value": "C",
+          "label": "C",
+          "text": "StringIndexOutOfBoundsException"
+        },
+        {
+          "value": "D",
+          "label": "D",
+          "text": "ClassCastException"
+        },
+        {
+          "value": "E",
+          "label": "E",
+          "text": "NullPointerException"
+        }
+      ],
+      "inputName": "Q9",
+      "inputType": "radio",
+      "correctAnswer": "E"
+    },
+    {
+      "id": "12.11",
+      "number": "12.11",
+      "text": "&nbsp; What exception type does the following program throw?<br><span style=\"font-family:monospace; font-size: 109%;\"><br><span class=\"keyword\">public</span>&nbsp;<span class=\"keyword\">class</span>&nbsp;Test&nbsp;{<br>&nbsp;&nbsp;<span class=\"keyword\">public</span> <span class=\"keyword\">static</span> <span class=\"keyword\">void</span> main(String[] args) {<br>&nbsp;&nbsp;&nbsp;&nbsp;Object o = <span class=\"keyword\">null</span>;<br>&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(o);<br>&nbsp;&nbsp;}<br>}<br></span>",
+      "choices": [
+        {
+          "value": "A",
+          "label": "A",
+          "text": "ArithmeticException"
+        },
+        {
+          "value": "B",
+          "label": "B",
+          "text": "ArrayIndexOutOfBoundsException"
+        },
+        {
+          "value": "C",
+          "label": "C",
+          "text": "StringIndexOutOfBoundsException"
+        },
+        {
+          "value": "D",
+          "label": "D",
+          "text": "No exception"
+        },
+        {
+          "value": "E",
+          "label": "E",
+          "text": "NullPointerException"
+        }
+      ],
+      "inputName": "Q10",
+      "inputType": "radio",
+      "correctAnswer": "D"
+    },
+    {
+      "id": "12.12",
+      "number": "12.12",
+      "text": "&nbsp; Which of the following statements are true? Please select all that apply.<br>",
+      "choices": [
+        {
+          "value": "A",
+          "label": "A",
+          "text": "You use the keyword throws to declare exceptions in the method heading."
+        },
+        {
+          "value": "B",
+          "label": "B",
+          "text": "A method may declare multiple exceptions to be thrown."
+        },
+        {
+          "value": "C",
+          "label": "C",
+          "text": "To throw an exception, use the key word throw."
+        },
+        {
+          "value": "D",
+          "label": "D",
+          "text": "If a checked exception occurs in a method, it must be either caught or declared to be thrown from the method."
+        }
+      ],
+      "inputName": "QD11",
+      "inputType": "checkbox",
+      "correctAnswer": "ABCD"
+    },
+    {
+      "id": "12.13",
+      "number": "12.13",
+      "text": "&nbsp; Analyze the following code:<br><span style=\"font-family:monospace; font-size: 109%;\"><br><span class=\"keyword\">public</span>&nbsp;<span class=\"keyword\">class</span>&nbsp;Test&nbsp;{<br>&nbsp;&nbsp;<span class=\"keyword\">public</span> <span class=\"keyword\">static</span> <span class=\"keyword\">void</span> main(String[] args) <span class=\"keyword\">throws</span> MyException {<br>&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<span class=\"literal\">\"Welcome to Java\"</span>);<br>&nbsp;&nbsp;}<br>}<br><br><span class=\"keyword\">class</span>&nbsp;MyException&nbsp;<span class=\"keyword\">extends</span>&nbsp;Error&nbsp;{<br>}<br></span>",
+      "choices": [
+        {
+          "value": "A",
+          "label": "A",
+          "text": "You should not declare a class that extends Error, because Error raises a fatal error that terminates the program."
+        },
+        {
+          "value": "B",
+          "label": "B",
+          "text": "You cannot declare an exception in the main method."
+        },
+        {
+          "value": "C",
+          "label": "C",
+          "text": "You declared an exception in the main method, but you did not throw it."
+        },
+        {
+          "value": "D",
+          "label": "D",
+          "text": "The program has a compile error."
+        }
+      ],
+      "inputName": "Q12",
+      "inputType": "radio",
+      "correctAnswer": "A"
+    },
+    {
+      "id": "12.14",
+      "number": "12.14",
+      "text": "&nbsp; What exception type does the following program throw?<br><span style=\"font-family:monospace; font-size: 109%;\"><br><span class=\"keyword\">public</span>&nbsp;<span class=\"keyword\">class</span>&nbsp;Test&nbsp;{<br>&nbsp;&nbsp;<span class=\"keyword\">public</span> <span class=\"keyword\">static</span> <span class=\"keyword\">void</span> main(String[] args) {<br>&nbsp;&nbsp;&nbsp;&nbsp;Object o = <span class=\"keyword\">new</span> Object();<br>&nbsp;&nbsp;&nbsp;&nbsp;String d = (String)o;<br>&nbsp;&nbsp;}<br>}<br></span>",
+      "choices": [
+        {
+          "value": "A",
+          "label": "A",
+          "text": "ArithmeticException"
+        },
+        {
+          "value": "B",
+          "label": "B",
+          "text": "ArrayIndexOutOfBoundsException"
+        },
+        {
+          "value": "C",
+          "label": "C",
+          "text": "StringIndexOutOfBoundsException"
+        },
+        {
+          "value": "D",
+          "label": "D",
+          "text": "ClassCastException"
+        },
+        {
+          "value": "E",
+          "label": "E",
+          "text": "No exception"
+        }
+      ],
+      "inputName": "Q13",
+      "inputType": "radio",
+      "correctAnswer": "D"
+    },
+    {
+      "id": "12.15",
+      "number": "12.15",
+      "text": "&nbsp;\tAnalyze the following code:<br><span style=\"font-family:monospace; font-size: 109%;\"><br><span class=\"keyword\">public</span>&nbsp;<span class=\"keyword\">class</span>&nbsp;Test&nbsp;{<br>&nbsp;&nbsp;<span class=\"keyword\">public</span> <span class=\"keyword\">static</span> <span class=\"keyword\">void</span> main(String[] args) {<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">try</span> {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String s = <span class=\"literal\">\"5<span class=\"literal\">.</span>6\"</span>;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Integer.parseInt(s); <span class=\"comment\">// Cause a NumberFormatException</span><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">int</span> i = <span class=\"constant\">0</span>;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">int</span> y = <span class=\"constant\">2</span> / i;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">catch</span> (Exception ex) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<span class=\"literal\">\"NumberFormatException\"</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">catch</span> (RuntimeException ex) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<span class=\"literal\">\"RuntimeException\"</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;}<br>}<br></span>",
+      "choices": [
+        {
+          "value": "A",
+          "label": "A",
+          "text": "The program displays NumberFormatException."
+        },
+        {
+          "value": "B",
+          "label": "B",
+          "text": "The program displays RuntimeException."
+        },
+        {
+          "value": "C",
+          "label": "C",
+          "text": "The program displays NumberFormatException followed by RuntimeException."
+        },
+        {
+          "value": "D",
+          "label": "D",
+          "text": "The program has a compile error."
+        }
+      ],
+      "inputName": "Q14",
+      "inputType": "radio",
+      "correctAnswer": "D"
+    },
+    {
+      "id": "12.16",
+      "number": "12.16",
+      "text": "&nbsp; An instance of _________ describes programming errors, such as bad casting, accessing an out-of-bounds array, and numeric errors.<br>",
+      "choices": [
+        {
+          "value": "A",
+          "label": "A",
+          "text": "RuntimeException"
+        },
+        {
+          "value": "B",
+          "label": "B",
+          "text": "Exception"
+        },
+        {
+          "value": "C",
+          "label": "C",
+          "text": "Error"
+        },
+        {
+          "value": "D",
+          "label": "D",
+          "text": "Throwable"
+        },
+        {
+          "value": "E",
+          "label": "E",
+          "text": "NumberFormatException"
+        }
+      ],
+      "inputName": "Q15",
+      "inputType": "radio",
+      "correctAnswer": "A"
+    },
+    {
+      "id": "12.17",
+      "number": "12.17",
+      "text": "&nbsp;\tAnalyze the following program.<br><span style=\"font-family:monospace; font-size: 109%;\"><br><span class=\"keyword\">public</span>&nbsp;<span class=\"keyword\">class</span>&nbsp;Test&nbsp;{<br>&nbsp;&nbsp;<span class=\"keyword\">public</span> <span class=\"keyword\">static</span> <span class=\"keyword\">void</span> main(String[] args) {<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">try</span> {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String s = <span class=\"literal\">\"5<span class=\"literal\">.</span>6\"</span>;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Integer.parseInt(s); <span class=\"comment\">// Cause a NumberFormatException</span><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">int</span> i = <span class=\"constant\">0</span>;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">int</span> y = <span class=\"constant\">2</span> / i;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<span class=\"literal\">\"Welcome to Java\"</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">catch</span> (Exception ex) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(ex);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;}<br>}<br></span>",
+      "choices": [
+        {
+          "value": "A",
+          "label": "A",
+          "text": "An exception is raised due to Integer.parseInt(s);"
+        },
+        {
+          "value": "B",
+          "label": "B",
+          "text": "An exception is raised due to 2 / i;"
+        },
+        {
+          "value": "C",
+          "label": "C",
+          "text": "The program has a compile error."
+        },
+        {
+          "value": "D",
+          "label": "D",
+          "text": "The program compiles and runs without exceptions."
+        }
+      ],
+      "inputName": "Q16",
+      "inputType": "radio",
+      "correctAnswer": "A"
+    },
+    {
+      "id": "12.18",
+      "number": "12.18",
+      "text": "&nbsp;\tWhat is displayed on the console when running the following program?<br><span style=\"font-family:monospace; font-size: 109%;\"><br><span class=\"keyword\">public</span>&nbsp;<span class=\"keyword\">class</span>&nbsp;Test&nbsp;{<br>&nbsp;&nbsp;<span class=\"keyword\">public</span> <span class=\"keyword\">static</span> <span class=\"keyword\">void</span> main(String[] args) {<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">try</span> {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p();<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<span class=\"literal\">\"After the method call\"</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">catch</span> (NumberFormatException ex) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<span class=\"literal\">\"NumberFormatException\"</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">catch</span> (RuntimeException ex) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<span class=\"literal\">\"RuntimeException\"</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;}<br><br>&nbsp;&nbsp;<span class=\"keyword\">static</span> <span class=\"keyword\">void</span> p() {<br>&nbsp;&nbsp;&nbsp;&nbsp;String s = <span class=\"literal\">\"5<span class=\"literal\">.</span>6\"</span>;<br>&nbsp;&nbsp;&nbsp;&nbsp;Integer.parseInt(s); <span class=\"comment\">// Cause a NumberFormatException</span><br><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">int</span> i = <span class=\"constant\">0</span>;<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">int</span> y = <span class=\"constant\">2</span> / i;<br>&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<span class=\"literal\">\"Welcome to Java\"</span>);<br>&nbsp;&nbsp;}<br>}<br></span>",
+      "choices": [
+        {
+          "value": "A",
+          "label": "A",
+          "text": "The program displays NumberFormatException."
+        },
+        {
+          "value": "B",
+          "label": "B",
+          "text": "The program displays NumberFormatException followed by After the method call."
+        },
+        {
+          "value": "C",
+          "label": "C",
+          "text": "The program displays NumberFormatException followed by RuntimeException."
+        },
+        {
+          "value": "D",
+          "label": "D",
+          "text": "The program has a compile error."
+        },
+        {
+          "value": "E",
+          "label": "E",
+          "text": "The program displays RuntimeException."
+        }
+      ],
+      "inputName": "Q17",
+      "inputType": "radio",
+      "correctAnswer": "A"
+    },
+    {
+      "id": "12.19",
+      "number": "12.19",
+      "text": "&nbsp;\tWhat is displayed on the console when running the following program?<br><span style=\"font-family:monospace; font-size: 109%;\"><br><span class=\"keyword\">public</span>&nbsp;<span class=\"keyword\">class</span>&nbsp;Test&nbsp;{<br>&nbsp;&nbsp;<span class=\"keyword\">public</span> <span class=\"keyword\">static</span> <span class=\"keyword\">void</span> main(String[] args) {<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">try</span> {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p();<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<span class=\"literal\">\"After the method call\"</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">catch</span> (RuntimeException ex) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<span class=\"literal\">\"RuntimeException\"</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">catch</span> (Exception ex) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<span class=\"literal\">\"Exception\"</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;}<br><br>&nbsp;&nbsp;<span class=\"keyword\">static</span> <span class=\"keyword\">void</span> p() <span class=\"keyword\">throws</span> Exception {<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">try</span> {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String s = <span class=\"literal\">\"5<span class=\"literal\">.</span>6\"</span>;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Integer.parseInt(s); <span class=\"comment\">// Cause a NumberFormatException</span><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">int</span> i = <span class=\"constant\">0</span>;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">int</span> y = <span class=\"constant\">2</span> / i;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<span class=\"literal\">\"Welcome to Java\"</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">catch</span> (RuntimeException ex) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<span class=\"literal\">\"RuntimeException\"</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">catch</span> (Exception ex) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<span class=\"literal\">\"Exception\"</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;}<br>}<br></span>",
+      "choices": [
+        {
+          "value": "A",
+          "label": "A",
+          "text": "The program displays RuntimeException twice."
+        },
+        {
+          "value": "B",
+          "label": "B",
+          "text": "The program displays Exception twice."
+        },
+        {
+          "value": "C",
+          "label": "C",
+          "text": "The program displays RuntimeException followed by After the method call."
+        },
+        {
+          "value": "D",
+          "label": "D",
+          "text": "The program displays Exception followed by RuntimeException."
+        },
+        {
+          "value": "E",
+          "label": "E",
+          "text": "The program has a compile error."
+        }
+      ],
+      "inputName": "Q18",
+      "inputType": "radio",
+      "correctAnswer": "C"
+    },
+    {
+      "id": "12.20",
+      "number": "12.20",
+      "text": "&nbsp;\tWhat is wrong in the following program?<br><span style=\"font-family:monospace; font-size: 109%;\"><br><span class=\"keyword\">public</span>&nbsp;<span class=\"keyword\">class</span>&nbsp;Test&nbsp;{<br>&nbsp;&nbsp;<span class=\"keyword\">public</span> <span class=\"keyword\">static</span> <span class=\"keyword\">void</span> main (String[] args) {<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">try</span> {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<span class=\"literal\">\"Welcome to Java\"</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;}<br>}<br></span>",
+      "choices": [
+        {
+          "value": "A",
+          "label": "A",
+          "text": "You cannot have a try block without a catch block."
+        },
+        {
+          "value": "B",
+          "label": "B",
+          "text": "You cannot have a try block without a catch block or a finally block."
+        },
+        {
+          "value": "C",
+          "label": "C",
+          "text": "A method call that does not declare exceptions cannot be placed inside a try block."
+        },
+        {
+          "value": "D",
+          "label": "D",
+          "text": "Nothing is wrong."
+        }
+      ],
+      "inputName": "Q19",
+      "inputType": "radio",
+      "correctAnswer": "B"
+    },
+    {
+      "id": "12.21",
+      "number": "12.21",
+      "text": "&nbsp;\tWhat is displayed on the console when running the following program?<br><span style=\"font-family:monospace; font-size: 109%;\"><br><span class=\"keyword\">public</span>&nbsp;<span class=\"keyword\">class</span>&nbsp;Test&nbsp;{<br>&nbsp;&nbsp;<span class=\"keyword\">public</span> <span class=\"keyword\">static</span> <span class=\"keyword\">void</span> main (String[] args) {<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">try</span> {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<span class=\"literal\">\"Welcome to Java\"</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">finally</span> {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<span class=\"literal\">\"The finally clause is executed\"</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;}<br>}<br></span>",
+      "choices": [
+        {
+          "value": "A",
+          "label": "A",
+          "text": "Welcome to Java"
+        },
+        {
+          "value": "B",
+          "label": "B",
+          "text": "Welcome to Java followed by The finally clause is executed in the next line"
+        },
+        {
+          "value": "C",
+          "label": "C",
+          "text": "The finally clause is executed"
+        },
+        {
+          "value": "D",
+          "label": "D",
+          "text": "None of the above"
+        }
+      ],
+      "inputName": "Q20",
+      "inputType": "radio",
+      "correctAnswer": "B"
+    },
+    {
+      "id": "12.22",
+      "number": "12.22",
+      "text": "&nbsp;\tWhat is displayed on the console when running the following program?<br><span style=\"font-family:monospace; font-size: 109%;\"><br><span class=\"keyword\">public</span>&nbsp;<span class=\"keyword\">class</span>&nbsp;Test&nbsp;{<br>&nbsp;&nbsp;<span class=\"keyword\">public</span> <span class=\"keyword\">static</span> <span class=\"keyword\">void</span> main (String[] args) {<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">try</span> {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<span class=\"literal\">\"Welcome to Java\"</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">return</span>;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">finally</span> {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<span class=\"literal\">\"The finally clause is executed\"</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;}<br>}<br></span>",
+      "choices": [
+        {
+          "value": "A",
+          "label": "A",
+          "text": "Welcome to Java"
+        },
+        {
+          "value": "B",
+          "label": "B",
+          "text": "Welcome to Java followed by The finally clause is executed in the next line"
+        },
+        {
+          "value": "C",
+          "label": "C",
+          "text": "The finally clause is executed"
+        },
+        {
+          "value": "D",
+          "label": "D",
+          "text": "None of the above"
+        }
+      ],
+      "inputName": "Q21",
+      "inputType": "radio",
+      "correctAnswer": "B"
+    },
+    {
+      "id": "12.23",
+      "number": "12.23",
+      "text": "&nbsp;\tWhat is displayed on the console when running the following program?<br><span style=\"font-family:monospace; font-size: 109%;\"><br><span class=\"keyword\">public</span>&nbsp;<span class=\"keyword\">class</span>&nbsp;Test&nbsp;{<br>&nbsp;&nbsp;<span class=\"keyword\">public</span> <span class=\"keyword\">static</span> <span class=\"keyword\">void</span> main(String[] args) {<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">try</span> {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<span class=\"literal\">\"Welcome to Java\"</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">int</span> i = <span class=\"constant\">0</span>;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">int</span> y = <span class=\"constant\">2</span> / i;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<span class=\"literal\">\"Welcome to HTML\"</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">finally</span> {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<span class=\"literal\">\"The finally clause is executed\"</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;}<br>}<br></span>",
+      "choices": [
+        {
+          "value": "A",
+          "label": "A",
+          "text": "Welcome to Java, then an error message."
+        },
+        {
+          "value": "B",
+          "label": "B",
+          "text": "Welcome to Java followed by The finally clause is executed in the next line, then an error message."
+        },
+        {
+          "value": "C",
+          "label": "C",
+          "text": "The program displays three lines: Welcome to Java, Welcome to HTML, The finally clause is executed, then an error message."
+        },
+        {
+          "value": "D",
+          "label": "D",
+          "text": "None of the above."
+        }
+      ],
+      "inputName": "Q22",
+      "inputType": "radio",
+      "correctAnswer": "B"
+    },
+    {
+      "id": "12.24",
+      "number": "12.24",
+      "text": "&nbsp;\tWhat is displayed on the console when running the following program?<br><span style=\"font-family:monospace; font-size: 109%;\"><br><span class=\"keyword\">public</span>&nbsp;<span class=\"keyword\">class</span>&nbsp;Test&nbsp;{<br>&nbsp;&nbsp;<span class=\"keyword\">public</span> <span class=\"keyword\">static</span> <span class=\"keyword\">void</span> main(String[] args) {<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">try</span> {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<span class=\"literal\">\"Welcome to Java\"</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">int</span> i = <span class=\"constant\">0</span>;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">double</span> y = <span class=\"constant\">2</span><span class=\"literal\">.</span><span class=\"constant\">0</span> / i;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<span class=\"literal\">\"Welcome to HTML\"</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">finally</span> {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<span class=\"literal\">\"The finally clause is executed\"</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;}<br>}<br></span>",
+      "choices": [
+        {
+          "value": "A",
+          "label": "A",
+          "text": "Welcome to Java."
+        },
+        {
+          "value": "B",
+          "label": "B",
+          "text": "Welcome to Java followed by The finally clause is executed in the next line."
+        },
+        {
+          "value": "C",
+          "label": "C",
+          "text": "The program displays three lines: Welcome to Java, Welcome to HTML, The finally clause is executed."
+        },
+        {
+          "value": "D",
+          "label": "D",
+          "text": "None of the above."
+        }
+      ],
+      "inputName": "Q23",
+      "inputType": "radio",
+      "correctAnswer": "C"
+    },
+    {
+      "id": "12.25",
+      "number": "12.25",
+      "text": "&nbsp;\tWhat is displayed on the console when running the following program?<br><span style=\"font-family:monospace; font-size: 109%;\"><br><span class=\"keyword\">public</span>&nbsp;<span class=\"keyword\">class</span>&nbsp;Test&nbsp;{<br>&nbsp;&nbsp;<span class=\"keyword\">public</span> <span class=\"keyword\">static</span> <span class=\"keyword\">void</span> main(String[] args) {<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">try</span> {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<span class=\"literal\">\"Welcome to Java\"</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">int</span> i = <span class=\"constant\">0</span>;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">int</span> y = <span class=\"constant\">2</span> / i;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<span class=\"literal\">\"Welcome to Java\"</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">catch</span> (RuntimeException ex) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<span class=\"literal\">\"Welcome to Java\"</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">finally</span> {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<span class=\"literal\">\"End of the block\"</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;}<br>}<br></span>",
+      "choices": [
+        {
+          "value": "A",
+          "label": "A",
+          "text": "The program displays Welcome to Java three times followed by End of the block."
+        },
+        {
+          "value": "B",
+          "label": "B",
+          "text": "The program displays Welcome to Java two times followed by End of the block."
+        },
+        {
+          "value": "C",
+          "label": "C",
+          "text": "The program displays Welcome to Java three times."
+        },
+        {
+          "value": "D",
+          "label": "D",
+          "text": "The program displays Welcome to Java two times."
+        }
+      ],
+      "inputName": "Q24",
+      "inputType": "radio",
+      "correctAnswer": "B"
+    },
+    {
+      "id": "12.26",
+      "number": "12.26",
+      "text": "&nbsp;\tWhat is displayed on the console when running the following program?<br><span style=\"font-family:monospace; font-size: 109%;\"><br><span class=\"keyword\">public</span>&nbsp;<span class=\"keyword\">class</span>&nbsp;Test&nbsp;{<br>&nbsp;&nbsp;<span class=\"keyword\">public</span> <span class=\"keyword\">static</span> <span class=\"keyword\">void</span> main(String[] args) {<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">try</span> {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<span class=\"literal\">\"Welcome to Java\"</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">int</span> i = <span class=\"constant\">0</span>;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">int</span> y = <span class=\"constant\">2</span> / i;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<span class=\"literal\">\"Welcome to Java\"</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">catch</span> (RuntimeException ex) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<span class=\"literal\">\"Welcome to Java\"</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">finally</span> {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<span class=\"literal\">\"End of the block\"</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<span class=\"literal\">\"End of the block\"</span>);<br>&nbsp;&nbsp;}<br>}<br></span>",
+      "choices": [
+        {
+          "value": "A",
+          "label": "A",
+          "text": "The program displays Welcome to Java three times followed by End of the block."
+        },
+        {
+          "value": "B",
+          "label": "B",
+          "text": "The program displays Welcome to Java two times followed by End of the block."
+        },
+        {
+          "value": "C",
+          "label": "C",
+          "text": "The program displays Welcome to Java two times followed by End of the block two times."
+        },
+        {
+          "value": "D",
+          "label": "D",
+          "text": "You cannot catch RuntimeException errors."
+        }
+      ],
+      "inputName": "Q25",
+      "inputType": "radio",
+      "correctAnswer": "C"
+    },
+    {
+      "id": "12.27",
+      "number": "12.27",
+      "text": "&nbsp;\tWhat is displayed on the console when running the following program?<br><span style=\"font-family:monospace; font-size: 109%;\"><br><span class=\"keyword\">public</span>&nbsp;<span class=\"keyword\">class</span>&nbsp;Test&nbsp;{<br>&nbsp;&nbsp;<span class=\"keyword\">public</span> <span class=\"keyword\">static</span> <span class=\"keyword\">void</span> main(String[] args) {<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">try</span> {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<span class=\"literal\">\"Welcome to Java\"</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">int</span> i = <span class=\"constant\">0</span>;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">int</span> y = <span class=\"constant\">2</span> / i;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<span class=\"literal\">\"Welcome to Java\"</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">finally</span> {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<span class=\"literal\">\"End of the block\"</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<span class=\"literal\">\"End of the block\"</span>);<br>&nbsp;&nbsp;}<br>}<br></span>",
+      "choices": [
+        {
+          "value": "A",
+          "label": "A",
+          "text": "The program displays Welcome to Java three times followed by End of the block."
+        },
+        {
+          "value": "B",
+          "label": "B",
+          "text": "The program displays Welcome to Java two times followed by End of the block."
+        },
+        {
+          "value": "C",
+          "label": "C",
+          "text": "The program displays Welcome to Java two times followed by End of the block two times."
+        },
+        {
+          "value": "D",
+          "label": "D",
+          "text": "The program displays Welcome to Java and End of the block, and then terminates because of an unhandled exception."
+        }
+      ],
+      "inputName": "Q26",
+      "inputType": "radio",
+      "correctAnswer": "D"
+    },
+    {
+      "id": "12.28",
+      "number": "12.28",
+      "text": "&nbsp;\tWhich of the following is not an advantage of Java exception handling?<br>",
+      "choices": [
+        {
+          "value": "A",
+          "label": "A",
+          "text": "Java separates exception handling from normal processing tasks."
+        },
+        {
+          "value": "B",
+          "label": "B",
+          "text": "Exception handling improves performance."
+        },
+        {
+          "value": "C",
+          "label": "C",
+          "text": "Exception handling makes it possible for the caller's caller to handle the exception."
+        },
+        {
+          "value": "D",
+          "label": "D",
+          "text": "Exception handling simplifies programming because the error-reporting and error-handling code can be placed at the catch block."
+        }
+      ],
+      "inputName": "Q27",
+      "inputType": "radio",
+      "correctAnswer": "B"
+    },
+    {
+      "id": "12.29",
+      "number": "12.29",
+      "text": "&nbsp;\tAnalyze the following code:<br><span style=\"font-family:monospace; font-size: 109%;\"><br><span class=\"keyword\">public</span>&nbsp;<span class=\"keyword\">class</span>&nbsp;Test&nbsp;{<br>&nbsp;&nbsp;<span class=\"keyword\">public</span> <span class=\"keyword\">static</span> <span class=\"keyword\">void</span> main(String[] args) {<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">try</span> {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">int</span> zero = <span class=\"constant\">0</span>;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">int</span> y = <span class=\"constant\">2</span> / zero;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">try</span> {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String s = <span class=\"literal\">\"5<span class=\"literal\">.</span>6\"</span>;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Integer.parseInt(s); <span class=\"comment\">// Cause a NumberFormatException</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">catch</span>(Exception e) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">catch</span>(RuntimeException e) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(e);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;}<br>}<br></span>",
+      "choices": [
+        {
+          "value": "A",
+          "label": "A",
+          "text": "A try-catch block cannot be embedded inside another try-catch block."
+        },
+        {
+          "value": "B",
+          "label": "B",
+          "text": "A good programming practice is to avoid nesting try-catch blocks, because nesting makes programs difficult to read. You can rewrite the program using only one try-catch block."
+        },
+        {
+          "value": "C",
+          "label": "C",
+          "text": "The program has a compile error because Exception appears before RuntimeException."
+        },
+        {
+          "value": "D",
+          "label": "D",
+          "text": "None of the above."
+        }
+      ],
+      "inputName": "Q28",
+      "inputType": "radio",
+      "correctAnswer": "B"
+    },
+    {
+      "id": "12.30",
+      "number": "12.30",
+      "text": "&nbsp;\tWhat is displayed on the console when running the following program?<br><span style=\"font-family:monospace; font-size: 109%;\"><br><span class=\"keyword\">public</span>&nbsp;<span class=\"keyword\">class</span>&nbsp;Test&nbsp;{<br>&nbsp;&nbsp;<span class=\"keyword\">public</span> <span class=\"keyword\">static</span> <span class=\"keyword\">void</span> main(String[] args) {<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">try</span> {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;method();<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<span class=\"literal\">\"After the method call\"</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">catch</span> (RuntimeException ex) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<span class=\"literal\">\"RuntimeException\"</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">catch</span> (Exception ex) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<span class=\"literal\">\"Exception\"</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;}<br><br>&nbsp;&nbsp;<span class=\"keyword\">static</span> <span class=\"keyword\">void</span> method() <span class=\"keyword\">throws</span> Exception {<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">try</span> {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String s = <span class=\"literal\">\"5<span class=\"literal\">.</span>6\"</span>;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Integer.parseInt(s); <span class=\"comment\">// Cause a NumberFormatException</span><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">int</span> i = <span class=\"constant\">0</span>;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">int</span> y = <span class=\"constant\">2</span> / i;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<span class=\"literal\">\"Welcome to Java\"</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">catch</span> (NumberFormatException ex) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<span class=\"literal\">\"NumberFormatException\"</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">throw</span> ex;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">catch</span> (RuntimeException ex) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<span class=\"literal\">\"RuntimeException\"</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;}<br>}<br></span>",
+      "choices": [
+        {
+          "value": "A",
+          "label": "A",
+          "text": "The program displays NumberFormatException twice."
+        },
+        {
+          "value": "B",
+          "label": "B",
+          "text": "The program displays NumberFormatException followed by After the method call."
+        },
+        {
+          "value": "C",
+          "label": "C",
+          "text": "The program displays NumberFormatException followed by RuntimeException."
+        },
+        {
+          "value": "D",
+          "label": "D",
+          "text": "The program has a compile error."
+        }
+      ],
+      "inputName": "Q29",
+      "inputType": "radio",
+      "correctAnswer": "C"
+    },
+    {
+      "id": "12.31",
+      "number": "12.31",
+      "text": "&nbsp;\tWhat are the reasons to create an instance of the File class? Please select all that apply.<br>",
+      "choices": [
+        {
+          "value": "A",
+          "label": "A",
+          "text": "To determine whether the file exists."
+        },
+        {
+          "value": "B",
+          "label": "B",
+          "text": "To obtain the properties of the file such as whether the file can be read, written, or is hidden."
+        },
+        {
+          "value": "C",
+          "label": "C",
+          "text": "To rename the file."
+        },
+        {
+          "value": "D",
+          "label": "D",
+          "text": "To delete the file."
+        },
+        {
+          "value": "E",
+          "label": "E",
+          "text": "To read/write data from/to a file"
+        }
+      ],
+      "inputName": "QE30",
+      "inputType": "checkbox",
+      "correctAnswer": "ABCD"
+    },
+    {
+      "id": "12.32",
+      "number": "12.32",
+      "text": "&nbsp;\tWhich of the following is used to test if a file c:\\temp\\test.txt exists?<br>",
+      "choices": [
+        {
+          "value": "A",
+          "label": "A",
+          "text": "new File(\"c:\\temp\\test.txt\").exists()"
+        },
+        {
+          "value": "B",
+          "label": "B",
+          "text": "new File(\"c:\\\\temp\\\\test.txt\").exists()"
+        },
+        {
+          "value": "C",
+          "label": "C",
+          "text": "new File(\"c:\\temp\\test.txt\").exist()"
+        },
+        {
+          "value": "D",
+          "label": "D",
+          "text": "new File(\"c:\\\\temp\\\\test.txt\").exist()"
+        },
+        {
+          "value": "E",
+          "label": "E",
+          "text": "None of the above."
+        }
+      ],
+      "inputName": "Q31",
+      "inputType": "radio",
+      "correctAnswer": "B"
+    },
+    {
+      "id": "12.33",
+      "number": "12.33",
+      "text": "&nbsp;\tWhich of the following statements creates an instance of File in Windows for the file c:\\temp.txt?<br>",
+      "choices": [
+        {
+          "value": "A",
+          "label": "A",
+          "text": "new File(\"c:\\temp.txt\")"
+        },
+        {
+          "value": "B",
+          "label": "B",
+          "text": "new File(\"c:\\\\temp.txt\")"
+        },
+        {
+          "value": "C",
+          "label": "C",
+          "text": "new File(\"c:/temp.txt\")"
+        },
+        {
+          "value": "D",
+          "label": "D",
+          "text": "new File(\"c://temp.txt\")"
+        }
+      ],
+      "inputName": "Q32",
+      "inputType": "radio",
+      "correctAnswer": "B"
+    },
+    {
+      "id": "12.34",
+      "number": "12.34",
+      "text": "&nbsp;\tWhich of the following statements are true?<br>",
+      "choices": [
+        {
+          "value": "A",
+          "label": "A",
+          "text": "If a file (e.g., c:\\temp.txt) does not exist, new File(\"c:\\\\temp.txt\") returns null."
+        },
+        {
+          "value": "B",
+          "label": "B",
+          "text": "If a directory (e.g., c:\\liang) does not exist, new File(\"c:\\liang\") returns null."
+        },
+        {
+          "value": "C",
+          "label": "C",
+          "text": "If a file (e.g., c:\\temp.txt) does not exist, new File(\"c:\\\\temp.txt\") creates a new file named c:\\temp.txt."
+        },
+        {
+          "value": "D",
+          "label": "D",
+          "text": "If a directory (e.g., c:\\liang) does not exist, new File(\"c:\\liang\") creates a new directory named c:\\liang."
+        },
+        {
+          "value": "E",
+          "label": "E",
+          "text": "None of the above."
+        }
+      ],
+      "inputName": "Q33",
+      "inputType": "radio",
+      "correctAnswer": "E"
+    },
+    {
+      "id": "12.35",
+      "number": "12.35",
+      "text": "&nbsp; Which class do you use to write data into a text file?<br>",
+      "choices": [
+        {
+          "value": "A",
+          "label": "A",
+          "text": "File"
+        },
+        {
+          "value": "B",
+          "label": "B",
+          "text": "PrintWriter"
+        },
+        {
+          "value": "C",
+          "label": "C",
+          "text": "Scanner"
+        },
+        {
+          "value": "D",
+          "label": "D",
+          "text": "System"
+        }
+      ],
+      "inputName": "Q34",
+      "inputType": "radio",
+      "correctAnswer": "B"
+    },
+    {
+      "id": "12.36",
+      "number": "12.36",
+      "text": "&nbsp; Which method can be used to write data?<br>",
+      "choices": [
+        {
+          "value": "A",
+          "label": "A",
+          "text": "close"
+        },
+        {
+          "value": "B",
+          "label": "B",
+          "text": "print"
+        },
+        {
+          "value": "C",
+          "label": "C",
+          "text": "exist"
+        },
+        {
+          "value": "D",
+          "label": "D",
+          "text": "rename"
+        }
+      ],
+      "inputName": "Q35",
+      "inputType": "radio",
+      "correctAnswer": "B"
+    },
+    {
+      "id": "12.37",
+      "number": "12.37",
+      "text": "&nbsp; Which method can be used to create an output object for file temp.txt? Please select all that apply.<br>",
+      "choices": [
+        {
+          "value": "A",
+          "label": "A",
+          "text": "new PrintWriter(\"temp.txt\")"
+        },
+        {
+          "value": "B",
+          "label": "B",
+          "text": "new PrintWriter(temp.txt)"
+        },
+        {
+          "value": "C",
+          "label": "C",
+          "text": "new PrintWriter(new File(\"temp.txt\"))"
+        },
+        {
+          "value": "D",
+          "label": "D",
+          "text": "new PrintWriter(File(\"temp.txt\"))"
+        }
+      ],
+      "inputName": "QD36",
+      "inputType": "checkbox",
+      "correctAnswer": "AC"
+    },
+    {
+      "id": "12.38",
+      "number": "12.38",
+      "text": "&nbsp; Which class contains the method for checking whether a file exists?<br>",
+      "choices": [
+        {
+          "value": "A",
+          "label": "A",
+          "text": "File"
+        },
+        {
+          "value": "B",
+          "label": "B",
+          "text": "PrintWriter"
+        },
+        {
+          "value": "C",
+          "label": "C",
+          "text": "Scanner"
+        },
+        {
+          "value": "D",
+          "label": "D",
+          "text": "System"
+        }
+      ],
+      "inputName": "Q37",
+      "inputType": "radio",
+      "correctAnswer": "A"
+    },
+    {
+      "id": "12.39",
+      "number": "12.39",
+      "text": "&nbsp; Which of the following statements are correct? Please select all that apply.<br><span style=\"font-family:monospace; font-size: 109%;\"><br>I:&nbsp;<br><span class=\"keyword\">try</span>&nbsp;(PrintWriter&nbsp;output&nbsp;=&nbsp;<span class=\"keyword\">new</span>&nbsp;PrintWriter(<span class=\"literal\">\"output.txt\"</span>);)&nbsp;{<br>&nbsp;&nbsp;output.println(<span class=\"literal\">\"Welcome to Java\"</span>);<br>}<br><br>II:&nbsp;<br><span class=\"keyword\">try</span>&nbsp;(PrintWriter&nbsp;output&nbsp;=&nbsp;<span class=\"keyword\">new</span>&nbsp;PrintWriter(<span class=\"literal\">\"output.txt\"</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Scanner input = <span class=\"keyword\">new</span> Scanner(System.in);) {<br>&nbsp;&nbsp;output.println(input.nextLine());<br>}<br><br>III:&nbsp;<br>PrintWriter&nbsp;output;<br><span class=\"keyword\">try</span>&nbsp;(output&nbsp;=&nbsp;<span class=\"keyword\">new</span>&nbsp;PrintWriter(<span class=\"literal\">\"output.txt\"</span>);)&nbsp;{<br>&nbsp;&nbsp;output.println(<span class=\"literal\">\"Welcome to Java\"</span>);<br>}<br><br>IV:&nbsp;<br><span class=\"keyword\">try</span>&nbsp;(PrintWriter&nbsp;output&nbsp;=&nbsp;<span class=\"keyword\">new</span>&nbsp;PrintWriter(<span class=\"literal\">\"output.txt\"</span>);)&nbsp;{<br>&nbsp;&nbsp;output.println(<span class=\"literal\">\"Welcome to Java\"</span>);<br>}<br><span class=\"keyword\">finally</span>&nbsp;{<br>&nbsp;&nbsp;output.close();<br>}<br></span>",
+      "choices": [
+        {
+          "value": "A",
+          "label": "A",
+          "text": "I"
+        },
+        {
+          "value": "B",
+          "label": "B",
+          "text": "II"
+        },
+        {
+          "value": "C",
+          "label": "C",
+          "text": "III"
+        },
+        {
+          "value": "D",
+          "label": "D",
+          "text": "IV"
+        }
+      ],
+      "inputName": "QD38",
+      "inputType": "checkbox",
+      "correctAnswer": "AB"
+    },
+    {
+      "id": "12.40",
+      "number": "12.40",
+      "text": "&nbsp; Which class do you use to read data from a text file?<br>",
+      "choices": [
+        {
+          "value": "A",
+          "label": "A",
+          "text": "File"
+        },
+        {
+          "value": "B",
+          "label": "B",
+          "text": "PrintWriter"
+        },
+        {
+          "value": "C",
+          "label": "C",
+          "text": "Scanner"
+        },
+        {
+          "value": "D",
+          "label": "D",
+          "text": "System"
+        }
+      ],
+      "inputName": "Q39",
+      "inputType": "radio",
+      "correctAnswer": "C"
+    },
+    {
+      "id": "12.41",
+      "number": "12.41",
+      "text": "&nbsp; Which method can be used to read a whole line from the file?<br>",
+      "choices": [
+        {
+          "value": "A",
+          "label": "A",
+          "text": "next"
+        },
+        {
+          "value": "B",
+          "label": "B",
+          "text": "nextLine"
+        },
+        {
+          "value": "C",
+          "label": "C",
+          "text": "nextInt"
+        },
+        {
+          "value": "D",
+          "label": "D",
+          "text": "nextDouble"
+        }
+      ],
+      "inputName": "Q40",
+      "inputType": "radio",
+      "correctAnswer": "B"
+    },
+    {
+      "id": "12.42",
+      "number": "12.42",
+      "text": "&nbsp; Which of the following statements are correct?<br><span style=\"font-family:monospace; font-size: 109%;\"><br>I:&nbsp;<br>File&nbsp;file&nbsp;=&nbsp;<span class=\"keyword\">new</span>&nbsp;File(<span class=\"literal\">\"input.txt\"</span>);<br><span class=\"keyword\">try</span>&nbsp;(Scanner&nbsp;input&nbsp;=&nbsp;<span class=\"keyword\">new</span>&nbsp;Scanner(file);)&nbsp;{<br>&nbsp;&nbsp;String line = input.nextLine();<br>}<br><br>II:&nbsp;<br><span class=\"keyword\">try</span>&nbsp;(File&nbsp;file&nbsp;=&nbsp;<span class=\"keyword\">new</span>&nbsp;File(<span class=\"literal\">\"input.txt\"</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Scanner input = <span class=\"keyword\">new</span> Scanner(file);) {<br>&nbsp;&nbsp;String line = input.nextLine();<br>}<br><br>III:&nbsp;<br>File&nbsp;file;<br><span class=\"keyword\">try</span>&nbsp;(file&nbsp;=&nbsp;<span class=\"keyword\">new</span>&nbsp;File(<span class=\"literal\">\"input.txt\"</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Scanner input = <span class=\"keyword\">new</span> Scanner(file);) {<br>&nbsp;&nbsp;String line = input.nextLine();<br>}<br><br>IV:&nbsp;<br>File&nbsp;file;<br>Scanner&nbsp;input;<br><span class=\"keyword\">try</span>&nbsp;(file&nbsp;=&nbsp;<span class=\"keyword\">new</span>&nbsp;File(<span class=\"literal\">\"input.txt\"</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;input = <span class=\"keyword\">new</span> Scanner(file);) {<br>&nbsp;&nbsp;String line = input.nextLine();<br>}<br></span>",
+      "choices": [
+        {
+          "value": "A",
+          "label": "A",
+          "text": "I"
+        },
+        {
+          "value": "B",
+          "label": "B",
+          "text": "II"
+        },
+        {
+          "value": "C",
+          "label": "C",
+          "text": "III"
+        },
+        {
+          "value": "D",
+          "label": "D",
+          "text": "IV"
+        }
+      ],
+      "inputName": "Q41",
+      "inputType": "radio",
+      "correctAnswer": "A"
+    },
+    {
+      "id": "12.43",
+      "number": "12.43",
+      "text": "&nbsp; Which method can be used to create an input object for file temp.txt?<br>",
+      "choices": [
+        {
+          "value": "A",
+          "label": "A",
+          "text": "new Scanner(\"temp.txt\")"
+        },
+        {
+          "value": "B",
+          "label": "B",
+          "text": "new Scanner(temp.txt)"
+        },
+        {
+          "value": "C",
+          "label": "C",
+          "text": "new Scanner(new File(\"temp.txt\"))"
+        },
+        {
+          "value": "D",
+          "label": "D",
+          "text": "new Scanner(File(\"temp.txt\"))"
+        }
+      ],
+      "inputName": "Q42",
+      "inputType": "radio",
+      "correctAnswer": "C"
+    },
+    {
+      "id": "12.44",
+      "number": "12.44",
+      "text": "&nbsp; Suppose you enter 34.3 57.8 789, then press the ENTER key. Analyze the following code.<br><span style=\"font-family:monospace; font-size: 109%;\"><br>Scanner&nbsp;input&nbsp;=&nbsp;<span class=\"keyword\">new</span>&nbsp;Scanner(System.in);<br><span class=\"keyword\">int</span>&nbsp;v1&nbsp;=&nbsp;input.nextInt();<br><span class=\"keyword\">int</span>&nbsp;v2&nbsp;=&nbsp;input.nextInt();<br>String&nbsp;line&nbsp;=&nbsp;input.nextLine();<br></span>",
+      "choices": [
+        {
+          "value": "A",
+          "label": "A",
+          "text": "After the last statement is executed, v1 is 34."
+        },
+        {
+          "value": "B",
+          "label": "B",
+          "text": "The program has a runtime error because 34.3 is not an integer."
+        },
+        {
+          "value": "C",
+          "label": "C",
+          "text": "After the last statement is executed, line contains characters '7', '8', '9', '\\n'."
+        },
+        {
+          "value": "D",
+          "label": "D",
+          "text": "After the last statement is executed, line contains characters '7', '8', '9'."
+        }
+      ],
+      "inputName": "Q43",
+      "inputType": "radio",
+      "correctAnswer": "B"
+    },
+    {
+      "id": "12.45",
+      "number": "12.45",
+      "text": "&nbsp; Suppose you enter 34.3 57.8 789, then press the ENTER key. Analyze the following code.<br><span style=\"font-family:monospace; font-size: 109%;\"><br>Scanner&nbsp;input&nbsp;=&nbsp;<span class=\"keyword\">new</span>&nbsp;Scanner(System.in);<br><span class=\"keyword\">double</span>&nbsp;v1&nbsp;=&nbsp;input.nextDouble();<br><span class=\"keyword\">double</span>&nbsp;v2&nbsp;=&nbsp;input.nextDouble();<br>String&nbsp;line&nbsp;=&nbsp;input.nextLine();<br></span>",
+      "choices": [
+        {
+          "value": "A",
+          "label": "A",
+          "text": "After the last statement is executed, line contains characters '7', '8', '9'."
+        },
+        {
+          "value": "B",
+          "label": "B",
+          "text": "After the last statement is executed, line contains characters '7', '8', '9', '\\n'."
+        },
+        {
+          "value": "C",
+          "label": "C",
+          "text": "After the last statement is executed, line contains characters ' ', '7', '8', '9', '\\n'."
+        },
+        {
+          "value": "D",
+          "label": "D",
+          "text": "After the last statement is executed, line contains characters ' ', '7', '8', '9'."
+        }
+      ],
+      "inputName": "Q44",
+      "inputType": "radio",
+      "correctAnswer": "D"
+    },
+    {
+      "id": "12.46",
+      "number": "12.46",
+      "text": "&nbsp; Suppose you enter 34.3, the ENTER key, 57.8, the ENTER key. Analyze the following code. Please select all that apply.<br><br><span style=\"font-family:monospace; font-size: 109%;\">Line&nbsp;<span class=\"constant\">1</span>&nbsp;&nbsp;Scanner&nbsp;input&nbsp;=&nbsp;<span class=\"keyword\">new</span>&nbsp;Scanner(System.in);<br>Line&nbsp;<span class=\"constant\">2</span>&nbsp;&nbsp;<span class=\"keyword\">double</span>&nbsp;v1&nbsp;=&nbsp;input.nextDouble();&nbsp;&nbsp;<br>Line&nbsp;<span class=\"constant\">3</span>&nbsp;&nbsp;<span class=\"keyword\">double</span>&nbsp;v2&nbsp;=&nbsp;input.nextDouble();<br>Line&nbsp;<span class=\"constant\">4</span>&nbsp;&nbsp;String&nbsp;line&nbsp;=&nbsp;input.nextLine();<br></span>",
+      "choices": [
+        {
+          "value": "A",
+          "label": "A",
+          "text": "After line 2 is executed, v1 is 34.3."
+        },
+        {
+          "value": "B",
+          "label": "B",
+          "text": "After line 3 is executed, v2 is 57.8."
+        },
+        {
+          "value": "C",
+          "label": "C",
+          "text": "After line 4 is executed, line contains an empty string."
+        },
+        {
+          "value": "D",
+          "label": "D",
+          "text": "After line 4 is executed, line is null."
+        },
+        {
+          "value": "E",
+          "label": "E",
+          "text": "After line 4 is executed, line contains character \"\\n\"."
+        }
+      ],
+      "inputName": "QE45",
+      "inputType": "checkbox",
+      "correctAnswer": "ABC"
+    },
+    {
+      "id": "12.47",
+      "number": "12.47",
+      "text": "&nbsp; Suppose you enter 34.3, the ENTER key, 57.8, the ENTER key, abc, the Enter key. Analyze the following code. Please select all that apply.<br><br><span style=\"font-family:monospace; font-size: 109%;\">Line&nbsp;<span class=\"constant\">1</span>&nbsp;&nbsp;Scanner&nbsp;input&nbsp;=&nbsp;<span class=\"keyword\">new</span>&nbsp;Scanner(System.in);<br>Line&nbsp;<span class=\"constant\">2</span>&nbsp;&nbsp;<span class=\"keyword\">double</span>&nbsp;v1&nbsp;=&nbsp;input.nextDouble();&nbsp;&nbsp;<br>Line&nbsp;<span class=\"constant\">3</span>&nbsp;&nbsp;<span class=\"keyword\">double</span>&nbsp;v2&nbsp;=&nbsp;input.nextDouble();<br>Line&nbsp;<span class=\"constant\">4</span>&nbsp;&nbsp;String&nbsp;line&nbsp;=&nbsp;input.nextLine();<br></span>",
+      "choices": [
+        {
+          "value": "A",
+          "label": "A",
+          "text": "After line 2 is executed, v1 is 34.3."
+        },
+        {
+          "value": "B",
+          "label": "B",
+          "text": "After line 3 is executed, v2 is 57.8."
+        },
+        {
+          "value": "C",
+          "label": "C",
+          "text": "After line 4 is executed, line contains an empty string."
+        },
+        {
+          "value": "D",
+          "label": "D",
+          "text": "After line 4 is executed, line is null."
+        },
+        {
+          "value": "E",
+          "label": "E",
+          "text": "After line 4 is executed, line contains character \"abc\"."
+        }
+      ],
+      "inputName": "QE46",
+      "inputType": "checkbox",
+      "correctAnswer": "ABC"
+    },
+    {
+      "id": "12.48",
+      "number": "12.48",
+      "text": "&nbsp;\tTo create an InputStream to read from a file on a Web server, you use the method __________ in the URL class.<br>",
+      "choices": [
+        {
+          "value": "A",
+          "label": "A",
+          "text": "getInputStream();"
+        },
+        {
+          "value": "B",
+          "label": "B",
+          "text": "obtainInputStream();"
+        },
+        {
+          "value": "C",
+          "label": "C",
+          "text": "openStream();"
+        },
+        {
+          "value": "D",
+          "label": "D",
+          "text": "connectStream();"
+        }
+      ],
+      "inputName": "Q47",
+      "inputType": "radio",
+      "correctAnswer": "C"
+    }
+  ],
+  "status": "completed",
+  "totalQuestions": 48
+}

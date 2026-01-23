@@ -1,0 +1,1410 @@
+[
+  {
+    "id": "task-0",
+    "label": "chapter=10, username=liang12e",
+    "params": {
+      "chapter": "10",
+      "username": "liang12e"
+    },
+    "title": "Chapter 10 Object-Oriented Thinking",
+    "questions": [
+      {
+        "id": "10.1",
+        "number": "10.1",
+        "text": "&nbsp; ___________ is attached to the class of the composing class to denote the aggregation relationship with the composed object.<br>",
+        "choices": [
+          {
+            "value": "A",
+            "label": "A",
+            "text": "An empty diamond"
+          },
+          {
+            "value": "B",
+            "label": "B",
+            "text": "A solid diamond"
+          },
+          {
+            "value": "C",
+            "label": "C",
+            "text": "An empty oval"
+          },
+          {
+            "value": "D",
+            "label": "D",
+            "text": "A solid oval"
+          }
+        ],
+        "inputName": "Q0",
+        "inputType": "radio",
+        "correctAnswer": "A"
+      },
+      {
+        "id": "10.2",
+        "number": "10.2",
+        "text": "&nbsp; An aggregation relationship is usually represented as __________ in ___________.<br>",
+        "choices": [
+          {
+            "value": "A",
+            "label": "A",
+            "text": "a data field/the aggregating class"
+          },
+          {
+            "value": "B",
+            "label": "B",
+            "text": "a data field/the aggregated class"
+          },
+          {
+            "value": "C",
+            "label": "C",
+            "text": "a method/the aggregating class"
+          },
+          {
+            "value": "D",
+            "label": "D",
+            "text": "a method/the aggregated class"
+          }
+        ],
+        "inputName": "Q1",
+        "inputType": "radio",
+        "correctAnswer": "A"
+      },
+      {
+        "id": "10.3",
+        "number": "10.3",
+        "text": "&nbsp; Composition means ______________.<br>",
+        "choices": [
+          {
+            "value": "A",
+            "label": "A",
+            "text": "that data fields should be declared private"
+          },
+          {
+            "value": "B",
+            "label": "B",
+            "text": "that a class extends another class"
+          },
+          {
+            "value": "C",
+            "label": "C",
+            "text": "that a variable of supertype refers to a subtype object"
+          },
+          {
+            "value": "D",
+            "label": "D",
+            "text": "that a class contains a data field that references another object"
+          }
+        ],
+        "inputName": "Q2",
+        "inputType": "radio",
+        "correctAnswer": "D"
+      },
+      {
+        "id": "10.4",
+        "number": "10.4",
+        "text": "&nbsp;\tWhich of the following statements will convert a string s into i of int type? Please select all that apply.<br>",
+        "choices": [
+          {
+            "value": "A",
+            "label": "A",
+            "text": "i = Integer.parseInt(s);"
+          },
+          {
+            "value": "B",
+            "label": "B",
+            "text": "i = (new Integer(s)).intValue();"
+          },
+          {
+            "value": "C",
+            "label": "C",
+            "text": "i = Integer.valueOf(s).intValue();"
+          },
+          {
+            "value": "D",
+            "label": "D",
+            "text": "i = Integer.valueOf(s);"
+          },
+          {
+            "value": "E",
+            "label": "E",
+            "text": "i = (int)(Double.parseDouble(s));"
+          }
+        ],
+        "inputName": "QE3",
+        "inputType": "checkbox",
+        "correctAnswer": "ABCDE"
+      },
+      {
+        "id": "10.5",
+        "number": "10.5",
+        "text": "&nbsp;\tWhich of the following statements will convert a string s into a double value d? Please select all that apply.<br>",
+        "choices": [
+          {
+            "value": "A",
+            "label": "A",
+            "text": "d = Double.parseDouble(s);"
+          },
+          {
+            "value": "B",
+            "label": "B",
+            "text": "d = (new Double(s)).doubleValue();"
+          },
+          {
+            "value": "C",
+            "label": "C",
+            "text": "d = Double.valueOf(s).doubleValue();"
+          }
+        ],
+        "inputName": "QC4",
+        "inputType": "checkbox",
+        "correctAnswer": "ABC"
+      },
+      {
+        "id": "10.6",
+        "number": "10.6",
+        "text": "&nbsp; Which of the following statements are correct? Please select all that apply.<br>",
+        "choices": [
+          {
+            "value": "A",
+            "label": "A",
+            "text": "Integer.parseInt(\"12\", 2);"
+          },
+          {
+            "value": "B",
+            "label": "B",
+            "text": "Integer.parseInt(100);"
+          },
+          {
+            "value": "C",
+            "label": "C",
+            "text": "Integer.parseInt(\"100\");"
+          },
+          {
+            "value": "D",
+            "label": "D",
+            "text": "Integer.parseInt(100, 16);"
+          },
+          {
+            "value": "E",
+            "label": "E",
+            "text": "Integer.parseInt(\"345\", 8);"
+          }
+        ],
+        "inputName": "QE5",
+        "inputType": "checkbox",
+        "correctAnswer": "CE"
+      },
+      {
+        "id": "10.7",
+        "number": "10.7",
+        "text": "&nbsp; What is the output of Integer.parseInt(\"10\", 2)?<br>",
+        "choices": [
+          {
+            "value": "A",
+            "label": "A",
+            "text": "1;"
+          },
+          {
+            "value": "B",
+            "label": "B",
+            "text": "2;"
+          },
+          {
+            "value": "C",
+            "label": "C",
+            "text": "10;"
+          },
+          {
+            "value": "D",
+            "label": "D",
+            "text": "Invalid statement;"
+          }
+        ],
+        "inputName": "Q6",
+        "inputType": "radio",
+        "correctAnswer": "B"
+      },
+      {
+        "id": "10.8",
+        "number": "10.8",
+        "text": "&nbsp;\tWhich of the following statements convert a double value d into a string s? Please select all that apply.<br>",
+        "choices": [
+          {
+            "value": "A",
+            "label": "A",
+            "text": "s = Double.valueOf(d).toString();"
+          },
+          {
+            "value": "B",
+            "label": "B",
+            "text": "s = d;"
+          },
+          {
+            "value": "C",
+            "label": "C",
+            "text": "s = Double.valueOf(d).stringOf();"
+          },
+          {
+            "value": "D",
+            "label": "D",
+            "text": "s = String.stringOf(d);"
+          },
+          {
+            "value": "E",
+            "label": "E",
+            "text": "s = d + \"\";"
+          }
+        ],
+        "inputName": "QE7",
+        "inputType": "checkbox",
+        "correctAnswer": "AE"
+      },
+      {
+        "id": "10.9",
+        "number": "10.9",
+        "text": "&nbsp; You may directly assign a primitive data type value to a wrapper object. This is called ______________.<br>",
+        "choices": [
+          {
+            "value": "A",
+            "label": "A",
+            "text": "auto boxing"
+          },
+          {
+            "value": "B",
+            "label": "B",
+            "text": "auto unboxing"
+          },
+          {
+            "value": "C",
+            "label": "C",
+            "text": "auto conversion"
+          },
+          {
+            "value": "D",
+            "label": "D",
+            "text": "auto casting"
+          }
+        ],
+        "inputName": "Q8",
+        "inputType": "radio",
+        "correctAnswer": "A"
+      },
+      {
+        "id": "10.10",
+        "number": "10.10",
+        "text": "&nbsp; Consider the following code. Please select all that apply.<br><span style=\"font-family:monospace; font-size: 109%;\"><br>Line&nbsp;<span class=\"constant\">1</span>:&nbsp;Integer[]&nbsp;intArray&nbsp;=&nbsp;{<span class=\"constant\">1</span>,&nbsp;<span class=\"constant\">2</span>,&nbsp;<span class=\"constant\">3</span>};<br>Line&nbsp;<span class=\"constant\">2</span>:&nbsp;<span class=\"keyword\">int</span>&nbsp;i&nbsp;=&nbsp;intArray[<span class=\"constant\">0</span>]&nbsp;+&nbsp;intArray[<span class=\"constant\">1</span>];<br>Line&nbsp;<span class=\"constant\">3</span>:&nbsp;<span class=\"keyword\">int</span>&nbsp;j&nbsp;=&nbsp;i&nbsp;+&nbsp;intArray[<span class=\"constant\">2</span>];<br>Line&nbsp;<span class=\"constant\">4</span>:&nbsp;<span class=\"keyword\">double</span>&nbsp;d&nbsp;=&nbsp;intArray[<span class=\"constant\">0</span>];<br></span>",
+        "choices": [
+          {
+            "value": "A",
+            "label": "A",
+            "text": "It is OK to assign 1, 2, 3 to an array of Integer objects in JDK 1.5."
+          },
+          {
+            "value": "B",
+            "label": "B",
+            "text": "It is OK to automatically convert an Integer object to an int value in Line 2."
+          },
+          {
+            "value": "C",
+            "label": "C",
+            "text": "It is OK to mix an int value with an Integer object in an expression in Line 3."
+          },
+          {
+            "value": "D",
+            "label": "D",
+            "text": "Line 4 is OK. An int value from intArray[0] object is assigned to a double variable d."
+          }
+        ],
+        "inputName": "QD9",
+        "inputType": "checkbox",
+        "correctAnswer": "ABCD"
+      },
+      {
+        "id": "10.11",
+        "number": "10.11",
+        "text": "&nbsp; To create an instance of BigInteger for 454, use ________________. Please select all that apply.<br>",
+        "choices": [
+          {
+            "value": "A",
+            "label": "A",
+            "text": "BigInteger.valueOf(454);"
+          },
+          {
+            "value": "B",
+            "label": "B",
+            "text": "new BigInteger(454);"
+          },
+          {
+            "value": "C",
+            "label": "C",
+            "text": "BigInteger.valueOf(\"454\");"
+          },
+          {
+            "value": "D",
+            "label": "D",
+            "text": "new BigInteger(\"454\");"
+          }
+        ],
+        "inputName": "QD10",
+        "inputType": "checkbox",
+        "correctAnswer": "AD"
+      },
+      {
+        "id": "10.12",
+        "number": "10.12",
+        "text": "&nbsp; To add BigInteger b1 to b2 (i.e., assing the result to b2), you write _________. Please select all that apply.<br>",
+        "choices": [
+          {
+            "value": "A",
+            "label": "A",
+            "text": "b1.add(b2);"
+          },
+          {
+            "value": "B",
+            "label": "B",
+            "text": "b2.add(b1);"
+          },
+          {
+            "value": "C",
+            "label": "C",
+            "text": "b2 = b1.add(b2);"
+          },
+          {
+            "value": "D",
+            "label": "D",
+            "text": "b2 = b2.add(b1);"
+          },
+          {
+            "value": "E",
+            "label": "E",
+            "text": "b1 = b2.add(b1);"
+          }
+        ],
+        "inputName": "QE11",
+        "inputType": "checkbox",
+        "correctAnswer": "CD"
+      },
+      {
+        "id": "10.13",
+        "number": "10.13",
+        "text": "&nbsp; What is the output of the following code?<br><span style=\"font-family:monospace; font-size: 109%;\"><br><span class=\"keyword\">public</span>&nbsp;<span class=\"keyword\">class</span>&nbsp;Test&nbsp;{<br>&nbsp;&nbsp;<span class=\"keyword\">public</span> <span class=\"keyword\">static</span> <span class=\"keyword\">void</span> main(String[] args) {<br>&nbsp;&nbsp;&nbsp;&nbsp;java.math.BigInteger x = <span class=\"keyword\">new</span> java.math.BigInteger(<span class=\"literal\">\"3\"</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;java.math.BigInteger y = <span class=\"keyword\">new</span> java.math.BigInteger(<span class=\"literal\">\"7\"</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;x.add(y);<br>&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(x);<br>&nbsp;&nbsp;}<br>}<br></span>",
+        "choices": [
+          {
+            "value": "A",
+            "label": "A",
+            "text": "3"
+          },
+          {
+            "value": "B",
+            "label": "B",
+            "text": "4"
+          },
+          {
+            "value": "C",
+            "label": "C",
+            "text": "10"
+          },
+          {
+            "value": "D",
+            "label": "D",
+            "text": "11"
+          }
+        ],
+        "inputName": "Q12",
+        "inputType": "radio",
+        "correctAnswer": "A"
+      },
+      {
+        "id": "10.14",
+        "number": "10.14",
+        "text": "&nbsp; To create an instance of BigDecimal for 454.45, use ___________. Please select all that apply.<br>",
+        "choices": [
+          {
+            "value": "A",
+            "label": "A",
+            "text": "BigDecimal.valueOf(454.45);"
+          },
+          {
+            "value": "B",
+            "label": "B",
+            "text": "new BigDecimal(454.45);"
+          },
+          {
+            "value": "C",
+            "label": "C",
+            "text": "BigDecimal(\"454.45\");"
+          },
+          {
+            "value": "D",
+            "label": "D",
+            "text": "new BigDecimal(\"454.45\");"
+          }
+        ],
+        "inputName": "QD13",
+        "inputType": "checkbox",
+        "correctAnswer": "AD"
+      },
+      {
+        "id": "10.15",
+        "number": "10.15",
+        "text": "&nbsp; BigInteger and BigDecimal are immutable.<br>",
+        "choices": [
+          {
+            "value": "A",
+            "label": "A",
+            "text": "true"
+          },
+          {
+            "value": "B",
+            "label": "B",
+            "text": "false"
+          }
+        ],
+        "inputName": "Q14",
+        "inputType": "radio",
+        "correctAnswer": "A"
+      },
+      {
+        "id": "10.16",
+        "number": "10.16",
+        "text": "&nbsp; To divide BigDecimal b1 by b2 and assign the result to b1, you write _________.<br>",
+        "choices": [
+          {
+            "value": "A",
+            "label": "A",
+            "text": "b1.divide(b2);"
+          },
+          {
+            "value": "B",
+            "label": "B",
+            "text": "b2.divide(b1);"
+          },
+          {
+            "value": "C",
+            "label": "C",
+            "text": "b1 = b1.divide(b2, 20, RoundingMode.HALF_UP);"
+          },
+          {
+            "value": "D",
+            "label": "D",
+            "text": "b1 = b2.divide(b1, 20, RoundingMode.HALF_UP);"
+          },
+          {
+            "value": "E",
+            "label": "E",
+            "text": "b2 = b2.divide(b1, 20, RoundingMode.HALF_UP);"
+          }
+        ],
+        "inputName": "Q15",
+        "inputType": "radio",
+        "correctAnswer": "C"
+      },
+      {
+        "id": "10.17",
+        "number": "10.17",
+        "text": "&nbsp; Which of the following classes are immutable? Please select all that apply.<br>",
+        "choices": [
+          {
+            "value": "A",
+            "label": "A",
+            "text": "Integer"
+          },
+          {
+            "value": "B",
+            "label": "B",
+            "text": "Double"
+          },
+          {
+            "value": "C",
+            "label": "C",
+            "text": "BigInteger"
+          },
+          {
+            "value": "D",
+            "label": "D",
+            "text": "BigDecimal"
+          },
+          {
+            "value": "E",
+            "label": "E",
+            "text": "String"
+          }
+        ],
+        "inputName": "QE16",
+        "inputType": "checkbox",
+        "correctAnswer": "ABCDE"
+      },
+      {
+        "id": "10.18",
+        "number": "10.18",
+        "text": "&nbsp; Which of the following statements are correct?<br>",
+        "choices": [
+          {
+            "value": "A",
+            "label": "A",
+            "text": "new java.math.BigInteger(\"343\");"
+          },
+          {
+            "value": "B",
+            "label": "B",
+            "text": "new java.math.BigDecimal(\"343.445\");"
+          },
+          {
+            "value": "C",
+            "label": "C",
+            "text": "new java.math.BigInteger(343);"
+          },
+          {
+            "value": "D",
+            "label": "D",
+            "text": "new java.math.BigDecimal(343.445);"
+          }
+        ],
+        "inputName": "QD17",
+        "inputType": "checkbox",
+        "correctAnswer": "AB"
+      },
+      {
+        "id": "10.19",
+        "number": "10.19",
+        "text": "&nbsp; Which of the following statements is preferred to create a string \"Welcome to Java\"?<br>",
+        "choices": [
+          {
+            "value": "A",
+            "label": "A",
+            "text": "String s = \"Welcome to Java\";"
+          },
+          {
+            "value": "B",
+            "label": "B",
+            "text": "String s = new String(\"Welcome to Java\");"
+          },
+          {
+            "value": "C",
+            "label": "C",
+            "text": "String s; s = \"Welcome to Java\";"
+          },
+          {
+            "value": "D",
+            "label": "D",
+            "text": "String s; s = new String(\"Welcome to Java\");"
+          }
+        ],
+        "inputName": "Q18",
+        "inputType": "radio",
+        "correctAnswer": "A"
+      },
+      {
+        "id": "10.20",
+        "number": "10.20",
+        "text": "&nbsp;\tAnalyze the following code.<br><span style=\"font-family:monospace; font-size: 109%;\"><br><span class=\"keyword\">class</span>&nbsp;Test&nbsp;{&nbsp;&nbsp;<br>&nbsp;&nbsp;<span class=\"keyword\">public</span> <span class=\"keyword\">static</span> <span class=\"keyword\">void</span> main(String[] args)  {<br>&nbsp;&nbsp;&nbsp;&nbsp;String s;<br>&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<span class=\"literal\">\"s is \"</span> + s);<br>&nbsp;&nbsp;}<br>}<br></span>",
+        "choices": [
+          {
+            "value": "A",
+            "label": "A",
+            "text": "The program has a compile error because s is not initialized, but it is referenced in the println statement."
+          },
+          {
+            "value": "B",
+            "label": "B",
+            "text": "The program has a runtime error because s is not initialized, but it is referenced in the println statement."
+          },
+          {
+            "value": "C",
+            "label": "C",
+            "text": "The program has a runtime error because s is null in the println statement."
+          },
+          {
+            "value": "D",
+            "label": "D",
+            "text": "The program compiles and runs fine."
+          }
+        ],
+        "inputName": "Q19",
+        "inputType": "radio",
+        "correctAnswer": "A"
+      },
+      {
+        "id": "10.21",
+        "number": "10.21",
+        "text": "&nbsp;\tWhat is the output of the following code?<br><span style=\"font-family:monospace; font-size: 109%;\"><br><span class=\"keyword\">public</span>&nbsp;<span class=\"keyword\">class</span>&nbsp;Test&nbsp;{&nbsp;&nbsp;<br>&nbsp;&nbsp;<span class=\"keyword\">public</span> <span class=\"keyword\">static</span> <span class=\"keyword\">void</span> main(String[] args) {<br>&nbsp;&nbsp;&nbsp;&nbsp;String s1 = <span class=\"literal\">\"Welcome to Java!\"</span>;<br>&nbsp;&nbsp;&nbsp;&nbsp;String s2 = s1;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">if</span> (s1 == s2)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"literal\">\"s1 and s2 reference the same String object\"</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">else</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"literal\">\"s1 and s2 reference different String objects\"</span>);<br>&nbsp;&nbsp;}<br>}<br></span>",
+        "choices": [
+          {
+            "value": "A",
+            "label": "A",
+            "text": "s1 and s2 reference the same String object"
+          },
+          {
+            "value": "B",
+            "label": "B",
+            "text": "s1 and s2 reference different String objects"
+          }
+        ],
+        "inputName": "Q20",
+        "inputType": "radio",
+        "correctAnswer": "A"
+      },
+      {
+        "id": "10.22",
+        "number": "10.22",
+        "text": "&nbsp;\tWhat is the output of the following code?<br><span style=\"font-family:monospace; font-size: 109%;\"><br><span class=\"keyword\">public</span>&nbsp;<span class=\"keyword\">class</span>&nbsp;Test&nbsp;{&nbsp;&nbsp;<br>&nbsp;&nbsp;<span class=\"keyword\">public</span> <span class=\"keyword\">static</span> <span class=\"keyword\">void</span> main(String[] args) {<br>&nbsp;&nbsp;&nbsp;&nbsp;String s1 = <span class=\"literal\">\"Welcome to Java!\"</span>;<br>&nbsp;&nbsp;&nbsp;&nbsp;String s2 = <span class=\"literal\">\"Welcome to Java!\"</span>;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">if</span> (s1 == s2)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"literal\">\"s1 and s2 reference the same String object\"</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">else</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"literal\">\"s1 and s2 reference different String objects\"</span>);<br>&nbsp;&nbsp;}<br>}<br></span>",
+        "choices": [
+          {
+            "value": "A",
+            "label": "A",
+            "text": "s1 and s2 reference the same String object"
+          },
+          {
+            "value": "B",
+            "label": "B",
+            "text": "s1 and s2 reference different String objects"
+          }
+        ],
+        "inputName": "Q21",
+        "inputType": "radio",
+        "correctAnswer": "A"
+      },
+      {
+        "id": "10.23",
+        "number": "10.23",
+        "text": "&nbsp;\tWhat is the output of the following code?<br><span style=\"font-family:monospace; font-size: 109%;\"><br><span class=\"keyword\">public</span>&nbsp;<span class=\"keyword\">class</span>&nbsp;Test&nbsp;{&nbsp;&nbsp;<br>&nbsp;&nbsp;<span class=\"keyword\">public</span> <span class=\"keyword\">static</span> <span class=\"keyword\">void</span> main(String[] args) {<br>&nbsp;&nbsp;&nbsp;&nbsp;String s1 = <span class=\"keyword\">new</span> String(<span class=\"literal\">\"Welcome to Java!\"</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;String s2 = <span class=\"keyword\">new</span> String(<span class=\"literal\">\"Welcome to Java!\"</span>);<br><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">if</span> (s1 == s2)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"literal\">\"s1 and s2 reference the same String object\"</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">else</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"literal\">\"s1 and s2 reference different String objects\"</span>);<br>&nbsp;&nbsp;}<br>}<br></span>",
+        "choices": [
+          {
+            "value": "A",
+            "label": "A",
+            "text": "s1 and s2 reference the same String object"
+          },
+          {
+            "value": "B",
+            "label": "B",
+            "text": "s1 and s2 reference different String objects"
+          }
+        ],
+        "inputName": "Q22",
+        "inputType": "radio",
+        "correctAnswer": "B"
+      },
+      {
+        "id": "10.24",
+        "number": "10.24",
+        "text": "&nbsp;\tWhat is the output of the following code?<br><span style=\"font-family:monospace; font-size: 109%;\"><br><span class=\"keyword\">public</span>&nbsp;<span class=\"keyword\">class</span>&nbsp;Test&nbsp;{&nbsp;<br>&nbsp;&nbsp;<span class=\"keyword\">public</span> <span class=\"keyword\">static</span> <span class=\"keyword\">void</span> main(String[] args) {<br>&nbsp;&nbsp;&nbsp;&nbsp;String s1 = <span class=\"keyword\">new</span> String(<span class=\"literal\">\"Welcome to Java!\"</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;String s2 = <span class=\"keyword\">new</span> String(<span class=\"literal\">\"Welcome to Java!\"</span>);<br><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">if</span> (s1.equals(s2))<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<span class=\"literal\">\"s1 and s2 have the same contents\"</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">else</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<span class=\"literal\">\"s1 and s2 have different contents\"</span>);<br>&nbsp;&nbsp;}<br>}<br></span>",
+        "choices": [
+          {
+            "value": "A",
+            "label": "A",
+            "text": "s1 and s2 have the same contents"
+          },
+          {
+            "value": "B",
+            "label": "B",
+            "text": "s1 and s2 have different contents"
+          }
+        ],
+        "inputName": "Q23",
+        "inputType": "radio",
+        "correctAnswer": "A"
+      },
+      {
+        "id": "10.25",
+        "number": "10.25",
+        "text": "&nbsp;\tWhat is the output of the following code?<br><span style=\"font-family:monospace; font-size: 109%;\"><br><span class=\"keyword\">public</span>&nbsp;<span class=\"keyword\">class</span>&nbsp;Test&nbsp;{&nbsp;&nbsp;<br>&nbsp;&nbsp;<span class=\"keyword\">public</span> <span class=\"keyword\">static</span> <span class=\"keyword\">void</span> main(String[] args) {<br>&nbsp;&nbsp;&nbsp;&nbsp;String s1 = <span class=\"keyword\">new</span> String(<span class=\"literal\">\"Welcome to Java!\"</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;String s2 = s1.toUpperCase();<br><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">if</span> (s1 == s2)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<span class=\"literal\">\"s1 and s2 reference the same String object\"</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">else</span> <span class=\"keyword\">if</span> (s1.equals(s2))<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<span class=\"literal\">\"s1 and s2 have the same contents\"</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">else</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<span class=\"literal\">\"s1 and s2 are different objects\"</span>);<br>&nbsp;&nbsp;}<br>}<br></span>",
+        "choices": [
+          {
+            "value": "A",
+            "label": "A",
+            "text": "s1 and s2 reference the same String object"
+          },
+          {
+            "value": "B",
+            "label": "B",
+            "text": "s1 and s2 have the same contents"
+          },
+          {
+            "value": "C",
+            "label": "C",
+            "text": "s1 and s2 are different objects"
+          }
+        ],
+        "inputName": "Q24",
+        "inputType": "radio",
+        "correctAnswer": "C"
+      },
+      {
+        "id": "10.26",
+        "number": "10.26",
+        "text": "&nbsp;\tWhat is the output of the following code?<br><span style=\"font-family:monospace; font-size: 109%;\"><br><span class=\"keyword\">public</span>&nbsp;<span class=\"keyword\">class</span>&nbsp;Test&nbsp;{&nbsp;&nbsp;<br>&nbsp;&nbsp;<span class=\"keyword\">public</span> <span class=\"keyword\">static</span> <span class=\"keyword\">void</span> main(String[] args) {<br>&nbsp;&nbsp;&nbsp;&nbsp;String s1 = <span class=\"keyword\">new</span> String(<span class=\"literal\">\"Welcome to Java\"</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;String s2 = s1;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;s1 += <span class=\"literal\">\"and Welcome to HTML\"</span>;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">if</span> (s1 == s2)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"literal\">\"s1 and s2 reference the same String object\"</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"keyword\">else</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"literal\">\"s1 and s2 reference different String objects\"</span>);<br>&nbsp;&nbsp;}<br>}<br></span>",
+        "choices": [
+          {
+            "value": "A",
+            "label": "A",
+            "text": "s1 and s2 reference the same String object"
+          },
+          {
+            "value": "B",
+            "label": "B",
+            "text": "s1 and s2 reference different String objects"
+          }
+        ],
+        "inputName": "Q25",
+        "inputType": "radio",
+        "correctAnswer": "B"
+      },
+      {
+        "id": "10.27",
+        "number": "10.27",
+        "text": "&nbsp; Suppose s1 and s2 are two strings. Which of the following statements or expressions are incorrect? Please select all that apply.<br>",
+        "choices": [
+          {
+            "value": "A",
+            "label": "A",
+            "text": "String s = new String(\"new string\");"
+          },
+          {
+            "value": "B",
+            "label": "B",
+            "text": "String s3 = s1 + s2"
+          },
+          {
+            "value": "C",
+            "label": "C",
+            "text": "s1 &gt;= s2"
+          },
+          {
+            "value": "D",
+            "label": "D",
+            "text": "int i = s1.length"
+          },
+          {
+            "value": "E",
+            "label": "E",
+            "text": "s1.charAt(0) = '5'"
+          }
+        ],
+        "inputName": "QE26",
+        "inputType": "checkbox",
+        "correctAnswer": "CDE"
+      },
+      {
+        "id": "10.28",
+        "number": "10.28",
+        "text": "&nbsp;\tWhat is the output of the following code?<br><span style=\"font-family:monospace; font-size: 109%;\"><br>String&nbsp;s&nbsp;=&nbsp;<span class=\"literal\">\"University\"</span>;<br>s.replace(<span class=\"literal\">\"i\"</span>,&nbsp;<span class=\"literal\">\"ABC\"</span>);<br>System.out.println(s);<br></span>",
+        "choices": [
+          {
+            "value": "A",
+            "label": "A",
+            "text": "UnABCversity"
+          },
+          {
+            "value": "B",
+            "label": "B",
+            "text": "UnABCversABCty"
+          },
+          {
+            "value": "C",
+            "label": "C",
+            "text": "UniversABCty"
+          },
+          {
+            "value": "D",
+            "label": "D",
+            "text": "University"
+          }
+        ],
+        "inputName": "Q27",
+        "inputType": "radio",
+        "correctAnswer": "D"
+      },
+      {
+        "id": "10.29",
+        "number": "10.29",
+        "text": "&nbsp; Assume s is \"ABCABC\", the method __________ returns a new string \"aBCaBC\". Please select all that apply.<br>",
+        "choices": [
+          {
+            "value": "A",
+            "label": "A",
+            "text": "s.change('A', 'a')"
+          },
+          {
+            "value": "B",
+            "label": "B",
+            "text": "s.change('a', 'A')"
+          },
+          {
+            "value": "C",
+            "label": "C",
+            "text": "s.replace('A', 'a')"
+          },
+          {
+            "value": "D",
+            "label": "D",
+            "text": "s.replace('a', 'A')"
+          },
+          {
+            "value": "E",
+            "label": "E",
+            "text": "s.replace(\"ABCABC\", \"aBCaBC\")"
+          }
+        ],
+        "inputName": "QE28",
+        "inputType": "checkbox",
+        "correctAnswer": "CE"
+      },
+      {
+        "id": "10.30",
+        "number": "10.30",
+        "text": "&nbsp; What is displayed by the following code?<br><span style=\"font-family:monospace; font-size: 109%;\"><br><span class=\"keyword\">public</span>&nbsp;<span class=\"keyword\">static</span>&nbsp;<span class=\"keyword\">void</span>&nbsp;main(String[]&nbsp;args)&nbsp;{<br>&nbsp;&nbsp;String[] tokens = <span class=\"literal\">\"Welcome to Java\"</span>.split(<span class=\"literal\">\"o\"</span>);<br>&nbsp;&nbsp;<span class=\"keyword\">for</span> (<span class=\"keyword\">int</span> i = <span class=\"constant\">0</span>; i &lt; tokens.length; i++) {<br>&nbsp;&nbsp;&nbsp;&nbsp;System.out.print(tokens[i] + <span class=\"literal\">\" \"</span>);<br>&nbsp;&nbsp;}<br>}<br></span>",
+        "choices": [
+          {
+            "value": "A",
+            "label": "A",
+            "text": "Welcome to Java"
+          },
+          {
+            "value": "B",
+            "label": "B",
+            "text": "Welc me to Java"
+          },
+          {
+            "value": "C",
+            "label": "C",
+            "text": "Welc me t  Java"
+          },
+          {
+            "value": "D",
+            "label": "D",
+            "text": "Welcome t  Java"
+          }
+        ],
+        "inputName": "Q29",
+        "inputType": "radio",
+        "correctAnswer": "C"
+      },
+      {
+        "id": "10.31",
+        "number": "10.31",
+        "text": "&nbsp; What is displayed by the following statement?<br><span style=\"font-family:monospace; font-size: 109%;\"><br>System.out.println(<span class=\"literal\">\"Java&nbsp;is&nbsp;neat\"</span>.replaceAll(<span class=\"literal\">\"is\"</span>,&nbsp;<span class=\"literal\">\"AAA\"</span>));<br></span>",
+        "choices": [
+          {
+            "value": "A",
+            "label": "A",
+            "text": "JavaAAAneat"
+          },
+          {
+            "value": "B",
+            "label": "B",
+            "text": "JavaAAA neat"
+          },
+          {
+            "value": "C",
+            "label": "C",
+            "text": "Java AAA neat"
+          },
+          {
+            "value": "D",
+            "label": "D",
+            "text": "Java AAAneat"
+          }
+        ],
+        "inputName": "Q30",
+        "inputType": "radio",
+        "correctAnswer": "C"
+      },
+      {
+        "id": "10.32",
+        "number": "10.32",
+        "text": "&nbsp; What is displayed by the following code?<br><span style=\"font-family:monospace; font-size: 109%;\"><br>System.out.print(<span class=\"literal\">\"Hi,&nbsp;ABC,&nbsp;good\"</span>.matches(<span class=\"literal\">\"ABC&nbsp;\"</span>)&nbsp;+&nbsp;<span class=\"literal\">\"&nbsp;\"</span>);<br>System.out.println(<span class=\"literal\">\"Hi,&nbsp;ABC,&nbsp;good\"</span>.matches(<span class=\"literal\">\".*ABC.*\"</span>));<br></span>",
+        "choices": [
+          {
+            "value": "A",
+            "label": "A",
+            "text": "false false"
+          },
+          {
+            "value": "B",
+            "label": "B",
+            "text": "true false"
+          },
+          {
+            "value": "C",
+            "label": "C",
+            "text": "true true"
+          },
+          {
+            "value": "D",
+            "label": "D",
+            "text": "false true"
+          }
+        ],
+        "inputName": "Q31",
+        "inputType": "radio",
+        "correctAnswer": "D"
+      },
+      {
+        "id": "10.33",
+        "number": "10.33",
+        "text": "&nbsp; What is displayed by the following code?<br><span style=\"font-family:monospace; font-size: 109%;\"><br>System.out.print(<span class=\"literal\">\"A,B;C\"</span>.replaceAll(<span class=\"literal\">\",;\"</span>,&nbsp;<span class=\"literal\">\"#\"</span>)&nbsp;+&nbsp;<span class=\"literal\">\"&nbsp;\"</span>);<br>System.out.println(<span class=\"literal\">\"A,B;C\"</span>.replaceAll(<span class=\"literal\">\"[,;]\"</span>,&nbsp;<span class=\"literal\">\"#\"</span>));<br></span>",
+        "choices": [
+          {
+            "value": "A",
+            "label": "A",
+            "text": "A B C A#B#C"
+          },
+          {
+            "value": "B",
+            "label": "B",
+            "text": "A#B#C A#B#C"
+          },
+          {
+            "value": "C",
+            "label": "C",
+            "text": "A,B;C A#B#C"
+          },
+          {
+            "value": "D",
+            "label": "D",
+            "text": "A B C A B C"
+          }
+        ],
+        "inputName": "Q32",
+        "inputType": "radio",
+        "correctAnswer": "C"
+      },
+      {
+        "id": "10.34",
+        "number": "10.34",
+        "text": "&nbsp; What is displayed by the following code?<br><span style=\"font-family:monospace; font-size: 109%;\"><br>String[]&nbsp;tokens&nbsp;=&nbsp;<span class=\"literal\">\"A,B;C;D\"</span>.split(<span class=\"literal\">\"[,;]\"</span>);<br><span class=\"keyword\">for</span>&nbsp;(<span class=\"keyword\">int</span>&nbsp;i&nbsp;=&nbsp;<span class=\"constant\">0</span>;&nbsp;i&nbsp;&lt;&nbsp;tokens.length;&nbsp;i++)<br>&nbsp;&nbsp;System.out.print(tokens[i] +  <span class=\"literal\">\" \"</span>);<br></span>",
+        "choices": [
+          {
+            "value": "A",
+            "label": "A",
+            "text": "A,B;C;D"
+          },
+          {
+            "value": "B",
+            "label": "B",
+            "text": "A B C D"
+          },
+          {
+            "value": "C",
+            "label": "C",
+            "text": "A B C;D"
+          },
+          {
+            "value": "D",
+            "label": "D",
+            "text": "A B;C;D"
+          }
+        ],
+        "inputName": "Q33",
+        "inputType": "radio",
+        "correctAnswer": "B"
+      },
+      {
+        "id": "10.35",
+        "number": "10.35",
+        "text": "&nbsp;\tWhich of the following is the correct statement to return a string from an array a of characters?<br>",
+        "choices": [
+          {
+            "value": "A",
+            "label": "A",
+            "text": "toString(a)"
+          },
+          {
+            "value": "B",
+            "label": "B",
+            "text": "new String(a)"
+          },
+          {
+            "value": "C",
+            "label": "C",
+            "text": "convertToString(a)"
+          },
+          {
+            "value": "D",
+            "label": "D",
+            "text": "String.toString(a)"
+          }
+        ],
+        "inputName": "Q34",
+        "inputType": "radio",
+        "correctAnswer": "B"
+      },
+      {
+        "id": "10.36",
+        "number": "10.36",
+        "text": "&nbsp; Assume s is \"   abc  \", the method __________ returns a new string \"abc\".<br>",
+        "choices": [
+          {
+            "value": "A",
+            "label": "A",
+            "text": "s.trim(s)"
+          },
+          {
+            "value": "B",
+            "label": "B",
+            "text": "trim(s)"
+          },
+          {
+            "value": "C",
+            "label": "C",
+            "text": "String.trim(s)"
+          },
+          {
+            "value": "D",
+            "label": "D",
+            "text": "s.trim()"
+          }
+        ],
+        "inputName": "Q35",
+        "inputType": "radio",
+        "correctAnswer": "D"
+      },
+      {
+        "id": "10.37",
+        "number": "10.37",
+        "text": "&nbsp; Assume s is \"ABCABC\", the method __________ returns an array of characters.<br>",
+        "choices": [
+          {
+            "value": "A",
+            "label": "A",
+            "text": "toChars(s)"
+          },
+          {
+            "value": "B",
+            "label": "B",
+            "text": "s.toCharArray()"
+          },
+          {
+            "value": "C",
+            "label": "C",
+            "text": "String.toChars()"
+          },
+          {
+            "value": "D",
+            "label": "D",
+            "text": "String.toCharArray()"
+          },
+          {
+            "value": "E",
+            "label": "E",
+            "text": "s.toChars()"
+          }
+        ],
+        "inputName": "Q36",
+        "inputType": "radio",
+        "correctAnswer": "B"
+      },
+      {
+        "id": "10.38",
+        "number": "10.38",
+        "text": "&nbsp; __________ returns a string. Please select all that apply.<br>",
+        "choices": [
+          {
+            "value": "A",
+            "label": "A",
+            "text": "String.valueOf(123)"
+          },
+          {
+            "value": "B",
+            "label": "B",
+            "text": "String.valueOf(12.53)"
+          },
+          {
+            "value": "C",
+            "label": "C",
+            "text": "String.valueOf(false)"
+          },
+          {
+            "value": "D",
+            "label": "D",
+            "text": "String.valueOf(new char[]{'a', 'b', 'c'})"
+          }
+        ],
+        "inputName": "QD37",
+        "inputType": "checkbox",
+        "correctAnswer": "ABCD"
+      },
+      {
+        "id": "10.39",
+        "number": "10.39",
+        "text": "&nbsp; The following program displays __________.<br><span style=\"font-family:monospace; font-size: 109%;\"><br><span class=\"keyword\">public</span>&nbsp;<span class=\"keyword\">class</span>&nbsp;Test&nbsp;{&nbsp;&nbsp;<br>&nbsp;&nbsp;<span class=\"keyword\">public</span> <span class=\"keyword\">static</span> <span class=\"keyword\">void</span> main(String[] args) {<br>&nbsp;&nbsp;&nbsp;&nbsp;String s = <span class=\"literal\">\"Java\"</span>;<br>&nbsp;&nbsp;&nbsp;&nbsp;StringBuilder builder = <span class=\"keyword\">new</span> StringBuilder(s);<br>&nbsp;&nbsp;&nbsp;&nbsp;change(s);<br>&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(s);<br>&nbsp;&nbsp;}<br>&nbsp;&nbsp;<br>&nbsp;&nbsp;<span class=\"keyword\">private</span> <span class=\"keyword\">static</span> <span class=\"keyword\">void</span> change(String s) {<br>&nbsp;&nbsp;&nbsp;&nbsp;s = s + <span class=\"literal\">\" and HTML\"</span>;<br>&nbsp;&nbsp;}<br>}<br></span>",
+        "choices": [
+          {
+            "value": "A",
+            "label": "A",
+            "text": "Java"
+          },
+          {
+            "value": "B",
+            "label": "B",
+            "text": "Java and HTML"
+          },
+          {
+            "value": "C",
+            "label": "C",
+            "text": "and HTML"
+          },
+          {
+            "value": "D",
+            "label": "D",
+            "text": "nothing is displayed"
+          }
+        ],
+        "inputName": "Q38",
+        "inputType": "radio",
+        "correctAnswer": "A"
+      },
+      {
+        "id": "10.40",
+        "number": "10.40",
+        "text": "&nbsp;\tAnalyze the following code.<br><span style=\"font-family:monospace; font-size: 109%;\"><br><span class=\"keyword\">class</span>&nbsp;Test&nbsp;{&nbsp;&nbsp;<br>&nbsp;&nbsp;<span class=\"keyword\">public</span> <span class=\"keyword\">static</span> <span class=\"keyword\">void</span> main(String[] args)  {<br>&nbsp;&nbsp;&nbsp;&nbsp;StringBuilder strBuilder = <span class=\"keyword\">new</span> StringBuilder(<span class=\"constant\">4</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;strBuilder.append(<span class=\"literal\">\"ABCDE\"</span>);<br>&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<span class=\"literal\">\"What's strBuilder.charAt(5)? \"</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ strBuilder.charAt(<span class=\"constant\">5</span>));<br>&nbsp;&nbsp;}<br>}<br></span>",
+        "choices": [
+          {
+            "value": "A",
+            "label": "A",
+            "text": "The program has a compile error because you cannot specify initial capacity in the StringBuilder constructor."
+          },
+          {
+            "value": "B",
+            "label": "B",
+            "text": "The program has a runtime error because because the builder's capacity is 4, but five characters \"ABCDE\" are appended into the builder."
+          },
+          {
+            "value": "C",
+            "label": "C",
+            "text": "The program has a runtime error because the length of the string in the builder is 5 after \"ABCDE\" is appended into the builder. Therefore, strBuilder.charAt(5) is out of range."
+          },
+          {
+            "value": "D",
+            "label": "D",
+            "text": "The program compiles and runs fine."
+          }
+        ],
+        "inputName": "Q39",
+        "inputType": "radio",
+        "correctAnswer": "C"
+      },
+      {
+        "id": "10.41",
+        "number": "10.41",
+        "text": "&nbsp; The following program displays __________.<br><span style=\"font-family:monospace; font-size: 109%;\"><br><span class=\"keyword\">public</span>&nbsp;<span class=\"keyword\">class</span>&nbsp;Test&nbsp;{&nbsp;&nbsp;<br>&nbsp;&nbsp;<span class=\"keyword\">public</span> <span class=\"keyword\">static</span> <span class=\"keyword\">void</span> main(String[] args) {<br>&nbsp;&nbsp;&nbsp;&nbsp;String s = <span class=\"literal\">\"Java\"</span>;<br>&nbsp;&nbsp;&nbsp;&nbsp;StringBuilder builder = <span class=\"keyword\">new</span> StringBuilder(s);<br>&nbsp;&nbsp;&nbsp;&nbsp;change(builder);<br>&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(builder);<br>&nbsp;&nbsp;}<br>&nbsp;&nbsp;<br>&nbsp;&nbsp;<span class=\"keyword\">private</span> <span class=\"keyword\">static</span> <span class=\"keyword\">void</span> change(StringBuilder builder) {<br>&nbsp;&nbsp;&nbsp;&nbsp;builder.append(<span class=\"literal\">\" and HTML\"</span>);<br>&nbsp;&nbsp;}<br>}<br></span>",
+        "choices": [
+          {
+            "value": "A",
+            "label": "A",
+            "text": "Java"
+          },
+          {
+            "value": "B",
+            "label": "B",
+            "text": "Java and HTML"
+          },
+          {
+            "value": "C",
+            "label": "C",
+            "text": "and HTML"
+          },
+          {
+            "value": "D",
+            "label": "D",
+            "text": "nothing is displayed"
+          }
+        ],
+        "inputName": "Q40",
+        "inputType": "radio",
+        "correctAnswer": "B"
+      },
+      {
+        "id": "10.42",
+        "number": "10.42",
+        "text": "&nbsp;\tWhich of the following is true? Please select all that apply.<br>",
+        "choices": [
+          {
+            "value": "A",
+            "label": "A",
+            "text": "You can add characters into a string builder."
+          },
+          {
+            "value": "B",
+            "label": "B",
+            "text": "You can delete characters from a string builder."
+          },
+          {
+            "value": "C",
+            "label": "C",
+            "text": "You can reverse the characters in a string buffer."
+          },
+          {
+            "value": "D",
+            "label": "D",
+            "text": "The capacity of a string buffer can be automatically adjusted."
+          }
+        ],
+        "inputName": "QD41",
+        "inputType": "checkbox",
+        "correctAnswer": "ABCD"
+      },
+      {
+        "id": "10.43",
+        "number": "10.43",
+        "text": "&nbsp; Assume StringBuilder strBuilder is \"ABCDEFG\", after invoking _________, strBuilder contains \"AEFG\".<br>",
+        "choices": [
+          {
+            "value": "A",
+            "label": "A",
+            "text": "strBuilder.delete(0, 3)"
+          },
+          {
+            "value": "B",
+            "label": "B",
+            "text": "strBuilder.delete(1, 3)"
+          },
+          {
+            "value": "C",
+            "label": "C",
+            "text": "strBuilder.delete(1, 4)"
+          },
+          {
+            "value": "D",
+            "label": "D",
+            "text": "strBuilder.delete(2, 4)"
+          }
+        ],
+        "inputName": "Q42",
+        "inputType": "radio",
+        "correctAnswer": "C"
+      },
+      {
+        "id": "10.44",
+        "number": "10.44",
+        "text": "&nbsp; Assume StringBuilder strBuilder is \"ABCDEFG\", after invoking _________, strBuilder contains \"ABCRRRRDEFG\".<br>",
+        "choices": [
+          {
+            "value": "A",
+            "label": "A",
+            "text": "strBuilder.insert(1, \"RRRR\")"
+          },
+          {
+            "value": "B",
+            "label": "B",
+            "text": "strBuilder.insert(2, \"RRRR\")"
+          },
+          {
+            "value": "C",
+            "label": "C",
+            "text": "strBuilder.insert(3, \"RRRR\")"
+          },
+          {
+            "value": "D",
+            "label": "D",
+            "text": "strBuilder.insert(4, \"RRRR\")"
+          }
+        ],
+        "inputName": "Q43",
+        "inputType": "radio",
+        "correctAnswer": "C"
+      },
+      {
+        "id": "10.45",
+        "number": "10.45",
+        "text": "&nbsp; Assume StringBuilder strBuilder is \"ABCCEFC\", after invoking _________, strBuilder contains \"ABTTEFT\".<br>",
+        "choices": [
+          {
+            "value": "A",
+            "label": "A",
+            "text": "strBuilder.replace('C', 'T')"
+          },
+          {
+            "value": "B",
+            "label": "B",
+            "text": "strBuilder.replace(\"C\", \"T\")"
+          },
+          {
+            "value": "C",
+            "label": "C",
+            "text": "strBuilder.replace(\"CC\", \"TT\")"
+          },
+          {
+            "value": "D",
+            "label": "D",
+            "text": "strBuilder.replace('C', \"TT\")"
+          },
+          {
+            "value": "E",
+            "label": "E",
+            "text": "strBuilder.replace(2, 7, \"TTEFT\")"
+          }
+        ],
+        "inputName": "Q44",
+        "inputType": "radio",
+        "correctAnswer": "E"
+      },
+      {
+        "id": "10.46",
+        "number": "10.46",
+        "text": "&nbsp; The StringBuilder methods _____________ not only change the contents of a string builder, but also returns a reference the string builder. Please select all that apply.<br>",
+        "choices": [
+          {
+            "value": "A",
+            "label": "A",
+            "text": "delete"
+          },
+          {
+            "value": "B",
+            "label": "B",
+            "text": "append"
+          },
+          {
+            "value": "C",
+            "label": "C",
+            "text": "insert"
+          },
+          {
+            "value": "D",
+            "label": "D",
+            "text": "reverse"
+          },
+          {
+            "value": "E",
+            "label": "E",
+            "text": "replace"
+          }
+        ],
+        "inputName": "QE45",
+        "inputType": "checkbox",
+        "correctAnswer": "ABCDE"
+      },
+      {
+        "id": "10.47",
+        "number": "10.47",
+        "text": "&nbsp; _________ returns the last character in a StringBuilder variable named strBuilder?<br>",
+        "choices": [
+          {
+            "value": "A",
+            "label": "A",
+            "text": "strBuilder.charAt(strBuilder.length() - 1)"
+          },
+          {
+            "value": "B",
+            "label": "B",
+            "text": "strBuilder.charAt(strBuilder.capacity() - 1)"
+          },
+          {
+            "value": "C",
+            "label": "C",
+            "text": "StringBuilder.charAt(strBuilder.length() - 1)"
+          },
+          {
+            "value": "D",
+            "label": "D",
+            "text": "StringBuilder.charAt(strBuilder.capacity() - 1)"
+          }
+        ],
+        "inputName": "Q46",
+        "inputType": "radio",
+        "correctAnswer": "A"
+      }
+    ],
+    "status": "completed",
+    "totalQuestions": 47
+  }
+]
