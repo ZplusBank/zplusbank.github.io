@@ -170,275 +170,21 @@ class ExamDataJSEditor:
         
         if not match:
             messagebox.showerror("Error", "Could not find EXAM_DATA in the file!")
+            self.load_default_data()
             return
         
         exam_data_str = match.group(1)
         
         # Convert JavaScript object to JSON-parseable format
-        # Remove comments
-        exam_data_str = re.sub(r'//.*?
-    
-    def save_to_js_file(self):
-        """Save modified EXAM_DATA back to renderer.js"""
-        if not self.js_file_path:
-            messagebox.showwarning("No File", "Please open a renderer.js file first!")
-            return
-        
-        if not self.js_file_content:
-            messagebox.showerror("Error", "No file content loaded!")
-            return
-        
-        # Convert exam_data to formatted JavaScript object
-        js_object = self.dict_to_js_object(self.exam_data, indent=4)
-        new_exam_data = f"const EXAM_DATA = {js_object};"
-        
-        # Replace EXAM_DATA in the file
-        pattern = r'const\s+EXAM_DATA\s*=\s*\{[^;]*\};'
-        
-        if not re.search(pattern, self.js_file_content, re.DOTALL):
-            messagebox.showerror("Error", "Could not find EXAM_DATA declaration in file!")
-            return
-        
-        new_content = re.sub(pattern, new_exam_data, self.js_file_content, 
-                            count=1, flags=re.DOTALL)
-        
-        try:
-            # Create backup
-            backup_path = self.js_file_path + '.backup'
-            with open(backup_path, 'w', encoding='utf-8') as f:
-                f.write(self.js_file_content)
-            
-            # Write new content
-            with open(self.js_file_path, 'w', encoding='utf-8') as f:
-                f.write(new_content)
-            
-            self.js_file_content = new_content
-            
-            messagebox.showinfo("Success", 
-                              f"File saved successfully!\n\n"
-                              f"Backup created at:\n{backup_path}")
-        except Exception as e:
-            messagebox.showerror("Error", f"Failed to save file:\n{str(e)}")
-    
-    def dict_to_js_object(self, obj, indent=4, level=0):
-        """Convert Python dict to JavaScript object string"""
-        if isinstance(obj, dict):
-            if not obj:
-                return "{}"
-            
-            indent_str = " " * (indent * level)
-            inner_indent = " " * (indent * (level + 1))
-            
-            items = []
-            for key, value in obj.items():
-                js_value = self.dict_to_js_object(value, indent, level + 1)
-                items.append(f'{inner_indent}{key}: {js_value}')
-            
-            return "{\n" + ",\n".join(items) + f"\n{indent_str}}}"
-        
-        elif isinstance(obj, str):
-            # Escape quotes and special characters
-            escaped = obj.replace('\\', '\\\\').replace('"', '\\"')
-            return f'"{escaped}"'
-        
-        elif isinstance(obj, (int, float)):
-            return str(obj)
-        
-        elif isinstance(obj, bool):
-            return "true" if obj else "false"
-        
-        elif obj is None:
-            return "null"
-        
-        elif isinstance(obj, list):
-            if not obj:
-                return "[]"
-            items = [self.dict_to_js_object(item, indent, level + 1) for item in obj]
-            return "[" + ", ".join(items) + "]"
-        
-        return str(obj)
-    
-    def reload_from_file(self):
-        """Reload data from the currently open file"""
-        if not self.js_file_path:
-            messagebox.showwarning("No File", "No file is currently open!")
-            return
-        
-        try:
-            with open(self.js_file_path, 'r', encoding='utf-8') as f:
-                self.js_file_content = f.read()
-            
-            self.extract_exam_data()
-            self.refresh_subject_list()
-            self.update_json_preview()
-            self.clear_form()
-            
-            messagebox.showinfo("Success", "Data reloaded from file!")
-        except Exception as e:
-            messagebox.showerror("Error", f"Failed to reload file:\n{str(e)}")
-    
-    def refresh_subject_list(self):
-        """Refresh the listbox with current subjects"""
-        self.subject_listbox.delete(0, tk.END)
-        for subject_id in sorted(self.exam_data.keys()):
-            self.subject_listbox.insert(tk.END, subject_id)
-    
-    def on_subject_select(self, event):
-        """Handle subject selection from listbox"""
-        selection = self.subject_listbox.curselection()
-        if not selection:
-            return
-        
-        subject_id = self.subject_listbox.get(selection[0])
-        self.current_subject = subject_id
-        self.load_subject_to_form(subject_id)
-    
-    def load_subject_to_form(self, subject_id):
-        """Load subject data into form fields"""
-        if subject_id not in self.exam_data:
-            return
-        
-        data = self.exam_data[subject_id]
-        self.id_entry.delete(0, tk.END)
-        self.id_entry.insert(0, data.get('id', ''))
-        
-        self.name_entry.delete(0, tk.END)
-        self.name_entry.insert(0, data.get('name', ''))
-        
-        self.desc_entry.delete(0, tk.END)
-        self.desc_entry.insert(0, data.get('description', ''))
-        
-        self.link_entry.delete(0, tk.END)
-        self.link_entry.insert(0, data.get('externalLink', ''))
-    
-    def add_subject(self):
-        """Add a new subject"""
-        if not self.js_file_path:
-            messagebox.showwarning("No File", "Please open a renderer.js file first!")
-            return
-        
-        dialog = tk.Toplevel(self.root)
-        dialog.title("Add New Subject")
-        dialog.geometry("300x150")
-        dialog.transient(self.root)
-        dialog.grab_set()
-        
-        ttk.Label(dialog, text="Enter Subject ID:").pack(pady=10)
-        id_entry = ttk.Entry(dialog, width=30)
-        id_entry.pack(pady=5)
-        id_entry.focus()
-        
-        def create():
-            subject_id = id_entry.get().strip()
-            if not subject_id:
-                messagebox.showwarning("Invalid Input", "Subject ID cannot be empty!")
-                return
-            
-            if subject_id in self.exam_data:
-                messagebox.showwarning("Duplicate ID", "This subject ID already exists!")
-                return
-            
-            self.exam_data[subject_id] = {
-                "id": subject_id,
-                "name": "",
-                "description": "",
-                "externalLink": ""
-            }
-            self.refresh_subject_list()
-            self.update_json_preview()
-            dialog.destroy()
-            
-            # Select the new subject
-            items = list(self.subject_listbox.get(0, tk.END))
-            if subject_id in items:
-                self.subject_listbox.selection_clear(0, tk.END)
-                self.subject_listbox.selection_set(items.index(subject_id))
-                self.load_subject_to_form(subject_id)
-        
-        ttk.Button(dialog, text="Create", command=create).pack(pady=10)
-        dialog.bind('<Return>', lambda e: create())
-    
-    def delete_subject(self):
-        """Delete selected subject"""
-        if not self.current_subject:
-            messagebox.showwarning("No Selection", "Please select a subject to delete!")
-            return
-        
-        if messagebox.askyesno("Confirm Delete", 
-                              f"Are you sure you want to delete '{self.current_subject}'?"):
-            del self.exam_data[self.current_subject]
-            self.current_subject = None
-            self.refresh_subject_list()
-            self.update_json_preview()
-            self.clear_form()
-    
-    def save_current_subject(self):
-        """Save current form data to the subject"""
-        if not self.js_file_path:
-            messagebox.showwarning("No File", "Please open a renderer.js file first!")
-            return
-        
-        if not self.current_subject:
-            messagebox.showwarning("No Selection", "Please select a subject first!")
-            return
-        
-        new_id = self.id_entry.get().strip()
-        if not new_id:
-            messagebox.showwarning("Invalid Input", "Subject ID cannot be empty!")
-            return
-        
-        # If ID changed, update the dictionary key
-        if new_id != self.current_subject:
-            if new_id in self.exam_data:
-                messagebox.showwarning("Duplicate ID", "This subject ID already exists!")
-                return
-            self.exam_data[new_id] = self.exam_data.pop(self.current_subject)
-            self.current_subject = new_id
-        
-        # Update data
-        self.exam_data[self.current_subject] = {
-            "id": self.id_entry.get().strip(),
-            "name": self.name_entry.get().strip(),
-            "description": self.desc_entry.get().strip(),
-            "externalLink": self.link_entry.get().strip()
-        }
-        
-        self.refresh_subject_list()
-        self.update_json_preview()
-        messagebox.showinfo("Success", "Subject saved! Don't forget to click 'Save to renderer.js'")
-    
-    def clear_form(self):
-        """Clear all form fields"""
-        self.id_entry.delete(0, tk.END)
-        self.name_entry.delete(0, tk.END)
-        self.desc_entry.delete(0, tk.END)
-        self.link_entry.delete(0, tk.END)
-    
-    def update_json_preview(self):
-        """Update the JSON preview text"""
-        self.json_text.delete('1.0', tk.END)
-        if self.exam_data:
-            json_str = json.dumps(self.exam_data, indent=4)
-            self.json_text.insert('1.0', json_str)
-        else:
-            self.json_text.insert('1.0', '// No data loaded')
-
-def main():
-    root = tk.Tk()
-    app = ExamDataJSEditor(root)
-    root.mainloop()
-
-if __name__ == "__main__":
-    main()
-, '', exam_data_str, flags=re.MULTILINE)
+        # Remove single-line comments
+        exam_data_str = re.sub(r'//.*', '', exam_data_str)
+        # Remove multi-line comments
         exam_data_str = re.sub(r'/\*.*?\*/', '', exam_data_str, flags=re.DOTALL)
         
         # Add quotes around unquoted property names
-        # Match property names like: propertyName: or propertyName :
         exam_data_str = re.sub(r'(\n\s*)([a-zA-Z_$][a-zA-Z0-9_$]*)\s*:', r'\1"\2":', exam_data_str)
         
         # Convert single quotes to double quotes
-        # But be careful not to convert quotes inside strings
         exam_data_str = self.convert_quotes(exam_data_str)
         
         # Remove trailing commas before closing braces/brackets
@@ -447,28 +193,23 @@ if __name__ == "__main__":
         try:
             self.exam_data = json.loads(exam_data_str)
             if not self.exam_data:
-                # If empty, load default
-                self.exam_data = {
-                    "java": {
-                        "id": "java",
-                        "name": "OOP2",
-                        "description": "Chapter 17 questions",
-                        "externalLink": "https://ibdx.github.io/javaOOP17/"
-                    }
-                }
+                self.load_default_data()
         except json.JSONDecodeError as e:
             messagebox.showerror("Parse Error", 
                                f"Could not parse EXAM_DATA object:\n{str(e)}\n\n"
                                "Loading default data instead.")
-            # Load default data
-            self.exam_data = {
-                "java": {
-                    "id": "java",
-                    "name": "OOP2",
-                    "description": "Chapter 17 questions",
-                    "externalLink": "https://ibdx.github.io/javaOOP17/"
-                }
+            self.load_default_data()
+    
+    def load_default_data(self):
+        """Load default example data"""
+        self.exam_data = {
+            "java": {
+                "id": "java",
+                "name": "OOP2",
+                "description": "Chapter 17 questions",
+                "externalLink": "https://ibdx.github.io/javaOOP17/"
             }
+        }
     
     def convert_quotes(self, js_str):
         """Convert single quotes to double quotes while preserving strings"""
@@ -477,7 +218,7 @@ if __name__ == "__main__":
         string_char = None
         escaped = False
         
-        for i, char in enumerate(js_str):
+        for char in js_str:
             if escaped:
                 result.append(char)
                 escaped = False
@@ -492,11 +233,11 @@ if __name__ == "__main__":
                 if not in_string:
                     in_string = True
                     string_char = char
-                    result.append('"')  # Always use double quotes
+                    result.append('"')
                 elif char == string_char:
                     in_string = False
                     string_char = None
-                    result.append('"')  # Always use double quotes
+                    result.append('"')
                 else:
                     result.append(char)
             else:
@@ -519,7 +260,7 @@ if __name__ == "__main__":
         new_exam_data = f"const EXAM_DATA = {js_object};"
         
         # Replace EXAM_DATA in the file
-        pattern = r'const\s+EXAM_DATA\s*=\s*\{[^;]*\};'
+        pattern = r'const\s+EXAM_DATA\s*=\s*\{.*?\n\};'
         
         if not re.search(pattern, self.js_file_content, re.DOTALL):
             messagebox.showerror("Error", "Could not find EXAM_DATA declaration in file!")
@@ -563,7 +304,6 @@ if __name__ == "__main__":
             return "{\n" + ",\n".join(items) + f"\n{indent_str}}}"
         
         elif isinstance(obj, str):
-            # Escape quotes and special characters
             escaped = obj.replace('\\', '\\\\').replace('"', '\\"')
             return f'"{escaped}"'
         
