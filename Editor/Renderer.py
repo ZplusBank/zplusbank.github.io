@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Exam Data JavaScript Editor
-A tkinter GUI application to edit EXAM_DATA directly in renderer.js file
+A tkinter GUI application to edit EXAM_DATA directly in sections.js file
 """
 
 import tkinter as tk
@@ -43,7 +43,7 @@ class ExamDataJSEditor:
         ttk.Label(title_frame, text="Exam Data JS Editor", 
                  font=('Arial', 16, 'bold')).pack(side=tk.LEFT)
         
-        ttk.Button(title_frame, text="Open renderer.js", 
+        ttk.Button(title_frame, text="Open sections.js", 
                   command=self.open_js_file).pack(side=tk.RIGHT, padx=5)
         
         # File path display
@@ -123,7 +123,7 @@ class ExamDataJSEditor:
         bottom_frame = ttk.Frame(main_frame)
         bottom_frame.grid(row=3, column=0, columnspan=2, pady=(10, 0))
         
-        ttk.Button(bottom_frame, text="Save to renderer.js", 
+        ttk.Button(bottom_frame, text="Save to sections.js", 
                   command=self.save_to_js_file, 
                   style='Accent.TButton').pack(side=tk.LEFT, padx=5)
         ttk.Button(bottom_frame, text="Reload from File", 
@@ -136,9 +136,9 @@ class ExamDataJSEditor:
     def open_js_file(self):
         """Open and parse renderer.js file"""
         filename = filedialog.askopenfilename(
-            title="Open renderer.js",
+            title="Open sections.js",
             filetypes=[("JavaScript files", "*.js"), ("All files", "*.*")],
-            initialfile="renderer.js"
+            initialfile="sections.js"
         )
         
         if filename:
@@ -248,7 +248,7 @@ class ExamDataJSEditor:
     def save_to_js_file(self):
         """Save modified EXAM_DATA back to renderer.js"""
         if not self.js_file_path:
-            messagebox.showwarning("No File", "Please open a renderer.js file first!")
+            messagebox.showwarning("No File", "Please open a sections.js file first!")
             return
         
         if not self.js_file_content:
@@ -380,7 +380,7 @@ class ExamDataJSEditor:
     def add_subject(self):
         """Add a new subject"""
         if not self.js_file_path:
-            messagebox.showwarning("No File", "Please open a renderer.js file first!")
+            messagebox.showwarning("No File", "Please open a sections.js file first!")
             return
         
         dialog = tk.Toplevel(self.root)
@@ -441,7 +441,7 @@ class ExamDataJSEditor:
     def save_current_subject(self):
         """Save current form data to the subject"""
         if not self.js_file_path:
-            messagebox.showwarning("No File", "Please open a renderer.js file first!")
+            messagebox.showwarning("No File", "Please open a sections.js file first!")
             return
         
         if not self.current_subject:
@@ -471,7 +471,7 @@ class ExamDataJSEditor:
         
         self.refresh_subject_list()
         self.update_json_preview()
-        messagebox.showinfo("Success", "Subject saved! Don't forget to click 'Save to renderer.js'")
+        messagebox.showinfo("Success", "Subject saved! Don't forget to click 'Save to sections.js'")
     
     def clear_form(self):
         """Clear all form fields"""

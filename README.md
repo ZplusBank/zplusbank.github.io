@@ -1,52 +1,39 @@
 # Z+ Exam Platform
 
-A fully static, client-side exam portal. It serves as a central hub that links to specific subject repositories.
+A fully static, client-side exam portal. It acts as a central hub linking to subject-specific repositories.
 
 ## 🛠️ Developer Overview
 
 - **Tech**: HTML5, Vanilla JavaScript (ES6 Modules), CSS3.
-- **Architecture**: Single Page Application (SPA) feel without a framework.
-- **Data Source**: Embedded `EXAM_DATA` object in `renderer.js` (No backend database).
-- **Localization**: Native bilingual support (English/Arabic) via `index.html`.
+- **Architecture**: Modular SPA. Data is separated from logic for cleaner edits.
+- **Data Source**: `engine/sections.js` (Centralized `EXAM_DATA`).
+- **Localization**: Native English/Arabic support via `index.html`.
 
 ## 📂 Project Structure
 
-- **index.html**: The main entry point. Handles routing (Home/Sections/Exam), Localization, and UI layout.
+- **index.html**: App entry point. Handles layout and localization.
 - **engine/**:
-  - `renderer.js`: Main controller. Manages Views, Subject Rendering, and Search.
-  - `evaluator.js`: Scoring logic.
-  - `timer.js`: Countdown logic.
+  - `renderer.js`: UI Controller. Manages view switching and subject rendering.
+  - `sections.js`: **Data Store**. Contains all subject metadata and links.
 - **Editor/**:
-  - `Renderer.py`: A Python GUI tool to safely edit `renderer.js` without touching code.
+  - `Renderer.py`: Python GUI tool to edit `sections.js` without touching code.
 
 ## ➕ How to Add a Section
 
-You have two ways to add a new exam section:
+### Option A: GUI Editor (Recommended)
+1.  Run: `python3 Editor/Renderer.py`
+2.  Open `engine/sections.js`.
+3.  Add/Edit subjects and click **"Save to sections.js"**.
 
-### Option A: Using the GUI Editor (Recommended)
-1.  Run the Python script:
-    ```bash
-    python3 Editor/Renderer.py
-    ```
-2.  Click **"Open renderer.js"** and select `engine/renderer.js`.
-3.  Click **"Add Subject"**.
-4.  Fill in the details:
-    - **ID**: Unique key (e.g., `python101`).
-    - **Name**: Display title (e.g., `Python Basics`).
-    - **Description**: Short subtitle.
-    - **External Link**: The URL to the deployed exam repo (e.g., `https://your-user.github.io/python-exam/`).
-5.  Click **"Save Changes"** -> **"Save to renderer.js"**.
-
-### Option B: Manual Code Edit
-1.  Open `engine/renderer.js`.
-2.  Locate the `EXAM_DATA` object.
-3.  Add a new entry:
+### Option B: Manual Edit
+1.  Open `engine/sections.js`.
+2.  Add a new entry to the `EXAM_DATA` object:
     ```javascript
-    new_subject: {
-        id: "new_subject",
-        name: "New Subject Title",
-        description: "Brief description",
-        externalLink: "https://link-to-exam-repo.com/"
+    subject_id: {
+        id: "subject_id",
+        name: "Subject Title",
+        description: "Short description",
+        externalLink: "https://your-github-io-link.com/"
     },
     ```
-4.  Save the file.
+3.  Save the file.
