@@ -72,9 +72,28 @@
                 <button id="btn-explore" class="btn-primary" data-i18n="explore_btn">Explore Sections</button>
             </header>
 
-            <section id="subjects-grid" class="subjects-grid">
+            <div class="subjects-grid">
                 <!-- Subject cards will be loaded here -->
-            </section>
+            </div>
+        </section>
+
+        <!-- Sections View with Search -->
+        <section id="sections-view" class="view hidden">
+            <div class="section-header" style="margin-bottom: 2rem; text-align: center;">
+                <h2 data-i18n="sections">Sections</h2>
+                <div class="search-container" style="max-width: 500px; margin: 1rem auto; padding: 0 1rem;">
+                    <div style="position: relative;">
+                        <i class="fas fa-search"
+                            style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: #64748b;"></i>
+                        <input type="text" id="section-search" placeholder="Search exams..."
+                            style="width: 100%; padding: 12px 20px 12px 45px; border-radius: 12px; border: 1px solid #e2e8f0; background: #f8fafc; font-size: 1rem; outline: none; transition: all 0.3s;">
+                    </div>
+                </div>
+            </div>
+
+            <div class="subjects-grid">
+                <!-- Same grid used for filtering -->
+            </div>
         </section>
 
         <section id="exam-view" class="view hidden">

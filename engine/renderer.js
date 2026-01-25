@@ -16,7 +16,7 @@ const views = {
 };
 
 const dom = {
-    subjectsGrid: document.getElementById('subjects-grid'),
+    subjectsGrids: document.querySelectorAll('.subjects-grid'),
     btnHome: document.getElementById('btn-home'),
     navHome: document.getElementById('nav-home'),
     navSubjects: document.getElementById('nav-subjects'),
@@ -59,33 +59,34 @@ function setupEventListeners() {
 }
 
 function renderSubjects(subjects) {
-    if (!dom.subjectsGrid) return;
+    if (!dom.subjectsGrids || dom.subjectsGrids.length === 0) return;
 
-    dom.subjectsGrid.innerHTML = '';
+    dom.subjectsGrids.forEach(grid => {
+        grid.innerHTML = '';
 
-    if (subjects.length === 0) {
-        dom.subjectsGrid.innerHTML = '<p style="text-align:center; grid-column: 1 / -1; width:100%;">No sections found.</p>';
-        return;
-    }
+        if (subjects.length === 0) {
+            grid.innerHTML = '<p style="text-align:center; grid-column: 1 / -1; width:100%;">No sections found.</p>';
+            return;
+        }
 
-    subjects.forEach(subject => {
-        const card = document.createElement('div');
-        card.className = 'subject-card';
-        card.innerHTML = `
-            <h3><i class="fas fa-book"></i> ${subject.name}</h3>
-            <p>${subject.description}</p>
-        `;
+        subjects.forEach(subject => {
+            const card = document.createElement('div');
+            card.className = 'subject-card';
+            card.innerHTML = `
+                <h3><i class="fas fa-book"></i> ${subject.name}</h3>
+                <p>${subject.description}</p>
+            `;
 
-        card.addEventListener('click', () => {
-            // Redirect to external HTML repository
-            if (subject.externalLink) {
-                window.location.href = subject.externalLink;
-            } else {
-                alert('No exam link configured for this subject.');
-            }
+            card.addEventListener('click', () => {
+                if (subject.externalLink) {
+                    window.location.href = subject.externalLink;
+                } else {
+                    alert('No exam link configured for this subject.');
+                }
+            });
+
+            grid.appendChild(card);
         });
-
-        dom.subjectsGrid.appendChild(card);
     });
 }
 
