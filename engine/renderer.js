@@ -18,9 +18,9 @@ const EXAM_DATA = {
         "externalLink": "https://ibdx.github.io/javaOOP17/"
     },
     java2: {
-        "id": "java2",
-        "name": "Java 2",
-        "description": "Java 2 questions",
+        "id": "it",
+        "name": "Information Technology",
+        "description": "IT Subjects",
         "externalLink": "https://zplusbank.github.io/it/"
     }
 
