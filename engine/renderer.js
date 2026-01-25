@@ -31,10 +31,12 @@ const EXAM_DATA = {
 let currentExam = null;
 let currentQuestionIndex = 0;
 let userAnswers = {}; // { questionIndex: selectedOptionIndex }
+let allSubjects = []; // Store for filtering
 
 // DOM Elements
 const views = {
     home: document.getElementById('home-view'),
+    sections: document.getElementById('sections-view'),
     exam: document.getElementById('exam-view'),
     results: document.getElementById('results-view')
 };
@@ -54,13 +56,16 @@ const dom = {
     btnRetry: document.getElementById('btn-retry'),
     btnHome: document.getElementById('btn-home'),
     navHome: document.getElementById('nav-home'),
+    navSubjects: document.getElementById('nav-subjects'), // New
+    btnExplore: document.getElementById('btn-explore'),   // New
+    sectionSearch: document.getElementById('section-search'), // New
     appLoader: document.getElementById('app-loader')
 };
 
 export function initApp() {
     // Render subjects from embedded data
-    const subjects = Object.values(EXAM_DATA);
-    renderSubjects(subjects);
+    allSubjects = Object.values(EXAM_DATA);
+    renderSubjects(allSubjects);
 
     // Hide loader
     dom.appLoader.classList.add('hidden');
@@ -88,10 +93,29 @@ function setupEventListeners() {
     dom.btnRetry.addEventListener('click', () => startExam(currentExam)); // Restart same exam
     dom.btnHome.addEventListener('click', showHome);
     dom.navHome.addEventListener('click', showHome);
+
+    // New Navigation
+    dom.navSubjects.addEventListener('click', showSectionsView);
+    dom.btnExplore.addEventListener('click', showSectionsView);
+
+    // Search Filter
+    dom.sectionSearch.addEventListener('input', (e) => {
+        const term = e.target.value.toLowerCase();
+        const filtered = allSubjects.filter(s =>
+            s.name.toLowerCase().includes(term) ||
+            s.description.toLowerCase().includes(term)
+        );
+        renderSubjects(filtered);
+    });
 }
 
 function renderSubjects(subjects) {
     dom.subjectsGrid.innerHTML = '';
+
+    if (subjects.length === 0) {
+        dom.subjectsGrid.innerHTML = '<p style="text-align:center; col-span:3; width:100%;">No sections found.</p>';
+        return;
+    }
 
     subjects.forEach(subject => {
         const card = document.createElement('div');
@@ -117,6 +141,25 @@ function renderSubjects(subjects) {
 function switchView(viewName) {
     Object.values(views).forEach(el => el.classList.add('hidden'));
     views[viewName].classList.remove('hidden');
+
+    // Update Active Nav
+    dom.navHome.classList.toggle('active', viewName === 'home');
+    dom.navSubjects.classList.toggle('active', viewName === 'sections');
+}
+
+function showHome() {
+    stopTimer();
+    switchView('home');
+    currentExam = null;
+}
+
+function showSectionsView() {
+    stopTimer();
+    switchView('sections');
+    currentExam = null;
+    dom.sectionSearch.value = ''; // Reset search
+    renderSubjects(allSubjects); // Show all
+    dom.sectionSearch.focus();
 }
 
 function startExam(examData) {
@@ -208,12 +251,6 @@ function showResults(result) {
         dom.scoreCircle.style.stroke = 'var(--danger-color)';
         dom.resultMessage.textContent = "Keep practicing!";
     }
-}
-
-function showHome() {
-    stopTimer();
-    switchView('home');
-    currentExam = null;
 }
 
 function escapeHtml(text) {
