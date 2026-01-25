@@ -17,7 +17,7 @@ const EXAM_DATA = {
         "description": "Chapter 17 questions",
         "externalLink": "https://ibdx.github.io/javaOOP17/"
     },
-    java2: {
+    it: {
         "id": "it",
         "name": "Information Technology",
         "description": "IT Subjects",
