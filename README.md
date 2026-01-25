@@ -22,8 +22,10 @@ A fully static, client-side exam portal. It acts as a central hub linking to sub
 
 ### Option A: GUI Editor (Recommended)
 1.  Run: `python3 Editor/Renderer.py`
-2.  Open `engine/sections.js`.
-3.  Add/Edit subjects and click **"Save to sections.js"**.
+2.  The editor automatically loads `engine/sections.js`.
+3.  **To Edit**: Select a row in the table, modify fields on the right, and click **"Update Section"**.
+4.  **To Add**: Click **"Add New"**, enter the ID and Name, then fill in details and update.
+5.  Click **"Save All"** to persist changes and create a backup.
 
 ### Option B: Manual Edit
 1.  Open `engine/sections.js`.
