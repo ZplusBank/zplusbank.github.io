@@ -1,69 +1,52 @@
-# 📚 Online Exam Platform
+# Z+ Exam Platform
 
-A fully static, serverless online exam platform. No backend, no database, no login required.
+A fully static, client-side exam portal. It serves as a central hub that links to specific subject repositories.
 
-## ✨ Features
+## 🛠️ Developer Overview
 
-- 🚀 **100% Static** - Runs entirely in the browser
-- 📝 **Multiple Question Types** - MCQ, Code Output, True/False
-- ⏱️ **Timed Exams** - Countdown timer with auto-submit
-- 🎨 **Modern UI** - Clean, responsive design
-- 📊 **Instant Results** - Score calculation and feedback
+- **Tech**: HTML5, Vanilla JavaScript (ES6 Modules), CSS3.
+- **Architecture**: Single Page Application (SPA) feel without a framework.
+- **Data Source**: Embedded `EXAM_DATA` object in `renderer.js` (No backend database).
+- **Localization**: Native bilingual support (English/Arabic) via `index.html`.
 
-## 🎯 Live Demo
+## 📂 Project Structure
 
-[View Live Demo](https://your-username.github.io/online-exam/)
+- **index.html**: The main entry point. Handles routing (Home/Sections/Exam), Localization, and UI layout.
+- **engine/**:
+  - `renderer.js`: Main controller. Manages Views, Subject Rendering, and Search.
+  - `evaluator.js`: Scoring logic.
+  - `timer.js`: Countdown logic.
+- **Editor/**:
+  - `Renderer.py`: A Python GUI tool to safely edit `renderer.js` without touching code.
 
-## 🚀 Quick Start
+## ➕ How to Add a Section
 
-1. Clone this repository
-2. Open `online-exam/index.html` in your browser
-3. Start taking exams!
+You have two ways to add a new exam section:
 
-## 📁 Project Structure
+### Option A: Using the GUI Editor (Recommended)
+1.  Run the Python script:
+    ```bash
+    python3 Editor/Renderer.py
+    ```
+2.  Click **"Open renderer.js"** and select `engine/renderer.js`.
+3.  Click **"Add Subject"**.
+4.  Fill in the details:
+    - **ID**: Unique key (e.g., `python101`).
+    - **Name**: Display title (e.g., `Python Basics`).
+    - **Description**: Short subtitle.
+    - **External Link**: The URL to the deployed exam repo (e.g., `https://your-user.github.io/python-exam/`).
+5.  Click **"Save Changes"** -> **"Save to renderer.js"**.
 
-```
-online-exam/
-├── index.html          # Main entry point
-├── assets/
-│   └── style.css      # Styling
-└── engine/
-    ├── renderer.js    # UI & exam data (embedded)
-    ├── timer.js       # Countdown timer
-    └── evaluator.js   # Answer checking
-```
-
-## 🛠️ Adding Subjects
-
-Each subject redirects to a separate HTML repository. This allows you to organize exams independently.
-
-**See [HOW_TO_ADD_SUBJECTS.md](HOW_TO_ADD_SUBJECTS.md) for detailed instructions.**
-
-Quick example - edit `engine/renderer.js`:
-
-```javascript
-const EXAM_DATA = {
-    math: {
-        id: "math",
-        name: "Mathematics",
-        description: "Algebra, Calculus, and Geometry",
-        externalLink: "https://your-username.github.io/math-exams/"
+### Option B: Manual Code Edit
+1.  Open `engine/renderer.js`.
+2.  Locate the `EXAM_DATA` object.
+3.  Add a new entry:
+    ```javascript
+    new_subject: {
+        id: "new_subject",
+        name: "New Subject Title",
+        description: "Brief description",
+        externalLink: "https://link-to-exam-repo.com/"
     },
-    physics: {
-        id: "physics",
-        name: "Physics",
-        description: "Mechanics and Thermodynamics",
-        externalLink: "./exams/physics.html"  // or use relative paths
-    }
-};
-```
-
-Each subject card will redirect users to the specified URL when clicked.
-
-## 📄 License
-
-MIT License - Feel free to use and modify!
-
-## 🤝 Contributing
-
-Contributions welcome! Fork, create a branch, and submit a PR.
+    ```
+4.  Save the file.
