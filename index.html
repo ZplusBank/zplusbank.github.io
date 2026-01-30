@@ -5,19 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Online Exam Platform</title>
-    <meta name="description" content="Fast, free, static online exam platform — no login required.">
-
-    <!-- Critical CSS inlined to improve First Contentful Paint (navbar, hero, basic layout) -->
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        :root{--bg-color:#0f172a;--text-primary:#f8fafc;--font-main:'Outfit',sans-serif;--navbar-height:4.75rem}
-        body{font-family:var(--font-main);background:var(--bg-color);color:var(--text-primary);padding-top:var(--navbar-height)}
-        .navbar{position:fixed;top:0;left:0;width:100%;height:var(--navbar-height);padding:1rem 0;background:rgba(15,23,42,0.95);z-index:1000}
-        .container{max-width:1200px;margin:0 auto;padding:0 20px}
-        .logo{font-size:1.25rem;font-weight:700;display:flex;align-items:center;gap:.5rem}
-        .nav-links a{padding:.5rem .75rem;display:inline-flex;align-items:center;border-radius:.375rem}
-        .hero{padding:6rem 0 4rem;text-align:center}
-        .btn-primary,.btn-secondary{padding:.75rem 1.25rem;min-height:44px;border-radius:.5rem}
-
         /* Loading overlay critical CSS */
         #app-loader {
             position: fixed;
@@ -37,28 +30,16 @@
             pointer-events: none;
         }
     </style>
-
-    <!-- Load main stylesheet and third-party CSS non-blocking with fallbacks -->
-    <link rel="preload" href="assets/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="assets/style.css"></noscript>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet"></noscript>
-
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 </head>
 
 <body>
-    <a href="#app" class="skip-link">Skip to content</a>
+
+
 
     <!-- App Loader -->
-    <div id="app-loader" role="status" aria-live="polite" aria-label="Loading application">
+    <div id="app-loader">
         <div class="loader-content">
-            <i class="fas fa-circle-notch fa-spin fa-3x" aria-hidden="true"></i>
-            <span class="visually-hidden">Loading Exam Engine</span>
+            <i class="fas fa-circle-notch fa-spin fa-3x"></i>
             <p style="margin-top: 1rem;">Loading Exam Engine...</p>
         </div>
     </div>
@@ -73,8 +54,9 @@
             <div class="nav-links">
                 <a href="#" id="nav-home" class="active" data-i18n="home">Home</a>
                 <a href="#" id="nav-subjects" data-i18n="sections">Sections</a>
-                <button id="langToggle" class="btn-secondary" style="padding: 0.3125rem 0.9375rem; font-size: 0.9rem;" aria-label="Toggle language">عربي</button>
-                <a href="https://github.com/ZplusBank/zplusbank.github.io" target="_blank" rel="noopener noreferrer" class="github-link" aria-label="View source on GitHub" title="View source on GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+                <button id="langToggle" class="btn-secondary" style="padding: 0.3125rem 0.9375rem; font-size: 0.9rem;">عربي</button>
+                <a href="https://github.com/ZplusBank/zplusbank.github.io" target="_blank" class="github-link"><i
+                        class="fab fa-github"></i></a>
             </div>
         </div>
     </nav>
