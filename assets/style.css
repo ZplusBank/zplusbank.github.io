@@ -8,8 +8,9 @@
     --success-color: #10b981;
     --danger-color: #ef4444;
     --gradient-primary: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
-    
+
     --font-main: 'Outfit', sans-serif;
+    --navbar-height: 76px;
     --radius-lg: 16px;
     --radius-md: 8px;
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
@@ -27,6 +28,7 @@ body {
     color: var(--text-primary);
     line-height: 1.6;
     overflow-x: hidden;
+    padding-top: var(--navbar-height);
 }
 
 /* Utilities */
@@ -40,7 +42,8 @@ body {
     display: none !important;
 }
 
-.btn-primary, .btn-secondary {
+.btn-primary,
+.btn-secondary {
     padding: 0.75rem 1.5rem;
     border-radius: var(--radius-md);
     border: none;
@@ -78,13 +81,17 @@ body {
 
 /* Navbar */
 .navbar {
-    background: rgba(15, 23, 42, 0.9);
+    background: rgba(15, 23, 42, 0.95);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid #1e293b;
-    position: sticky;
+    position: fixed;
+    /* Keep header static across language changes */
     top: 0;
-    z-index: 100;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
     padding: 1rem 0;
+    height: var(--navbar-height);
 }
 
 .nav-content {
@@ -116,8 +123,33 @@ body {
     transition: color 0.2s;
 }
 
-.nav-links a:hover, .nav-links a.active {
+.nav-links a:hover,
+.nav-links a.active {
     color: var(--accent-color);
+}
+
+/* Search box inside sections view */
+.search-box {
+    position: relative;
+}
+
+.search-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #64748b;
+}
+
+.search-input {
+    width: 100%;
+    padding: 12px 20px 12px 45px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    background: #f8fafc;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s;
 }
 
 /* Home View */
@@ -252,7 +284,8 @@ body {
     background: #0f172a;
     padding: 1rem 1.5rem;
     border-radius: var(--radius-md);
-    border: 2px solid transparent; /* Prepare for selected state */
+    border: 2px solid transparent;
+    /* Prepare for selected state */
     cursor: pointer;
     transition: all 0.2s;
     display: flex;
@@ -295,6 +328,25 @@ body {
 .exam-controls {
     display: flex;
     justify-content: space-between;
+}
+
+/* RTL adjustments */
+:root:dir(rtl) .search-container i.fas.fa-search,
+:root[dir="rtl"] .search-container i.fas.fa-search {
+    left: auto !important;
+    right: 15px !important;
+}
+
+:root:dir(rtl) .search-container input,
+:root[dir="rtl"] .search-container input {
+    padding: 12px 45px 12px 20px !important;
+    /* swap padding for RTL */
+}
+
+/* Reverse exam controls order in RTL */
+:root:dir(rtl) .exam-controls,
+:root[dir="rtl"] .exam-controls {
+    flex-direction: row-reverse;
 }
 
 /* Results View */

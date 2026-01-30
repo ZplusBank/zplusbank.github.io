@@ -82,11 +82,9 @@
             <div class="section-header" style="margin-bottom: 2rem; text-align: center;">
                 <h2 data-i18n="sections">Sections</h2>
                 <div class="search-container" style="max-width: 500px; margin: 1rem auto; padding: 0 1rem;">
-                    <div style="position: relative;">
-                        <i class="fas fa-search"
-                            style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: #64748b;"></i>
-                        <input type="text" id="section-search" placeholder="Search exams..."
-                            style="width: 100%; padding: 12px 20px 12px 45px; border-radius: 12px; border: 1px solid #e2e8f0; background: #f8fafc; font-size: 1rem; outline: none; transition: all 0.3s;">
+                    <div class="search-box">
+                        <i class="fas fa-search search-icon"></i>
+                        <input class="search-input" type="text" id="section-search" placeholder="Search exams...">
                     </div>
                 </div>
             </div>
@@ -140,7 +138,6 @@
     </main>
 
     <!-- Scripts -->
-    <script type="module" src="engine/renderer.js"></script>
     <script>
         // Localization Logic
         const translations = {
@@ -157,7 +154,8 @@
                 exam_completed: "Exam Completed!",
                 retry_btn: "Retry Exam",
                 back_home_btn: "Back to Home",
-                lang_toggle: "عربي"
+                lang_toggle: "عربي",
+                search_placeholder: "Search exams..."
             },
             ar: {
                 home: "الرئيسية",
@@ -184,10 +182,16 @@
             // Update text content
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
-                if (translations[lang][key]) {
+                if (translations[lang] && translations[lang][key]) {
                     el.textContent = translations[lang][key];
                 }
             });
+
+            // Update placeholders (search field, etc.)
+            const searchInput = document.getElementById('section-search');
+            if (searchInput && translations[lang] && translations[lang].search_placeholder) {
+                searchInput.placeholder = translations[lang].search_placeholder;
+            }
 
             // Toggle button text
             document.getElementById('langToggle').textContent = translations[lang].lang_toggle;
