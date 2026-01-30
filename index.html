@@ -5,11 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Online Exam Platform</title>
-    <link rel="stylesheet" href="assets/style.css">
+    <meta name="description" content="Free, fast, static online exam platform for practicing programming topics.">
+    <link rel="preload" href="assets/style.css" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="assets/style.css"></noscript>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="preload" as="style" onload="this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet"></noscript>
+    <!-- Tajawal for Arabic (preload but non-blocking) -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;600;700&display=swap" rel="preload" as="style" onload="this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;600;700&display=swap" rel="stylesheet"></noscript>
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     <style>
         /* Loading overlay critical CSS */
         #app-loader {
@@ -37,12 +44,12 @@
     <a href="#app" class="skip-link">Skip to content</a>
 
     <!-- App Loader -->
-    <div id="app-loader">
+    <div id="app-loader" role="status" aria-live="polite">
         <div class="loader-content">
-            <i class="fas fa-circle-notch fa-spin fa-3x"></i>
+            <i class="fas fa-circle-notch fa-spin fa-3x" aria-hidden="true"></i>
             <p style="margin-top: 1rem;">Loading Exam Engine...</p>
         </div>
-    </div>
+    </div> 
 
     <!-- Navigation -->
     <nav class="navbar" aria-label="Primary navigation">
@@ -55,8 +62,7 @@
                 <a href="#" id="nav-home" class="active" data-i18n="home">Home</a>
                 <a href="#" id="nav-subjects" data-i18n="sections">Sections</a>
                 <button id="langToggle" class="btn-secondary" style="padding: 0.3125rem 0.9375rem; font-size: 0.9rem;">عربي</button>
-                <a href="https://github.com/ZplusBank/zplusbank.github.io" target="_blank" class="github-link"><i
-                        class="fab fa-github"></i></a>
+                <a href="https://github.com/ZplusBank/zplusbank.github.io" target="_blank" class="github-link" aria-label="GitHub (opens in a new tab)" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i></a>
             </div>
         </div>
     </nav>
@@ -120,7 +126,7 @@
         <section id="results-view" class="view hidden">
             <div class="results-card">
                 <div class="score-circle">
-                    <svg viewBox="0 0 36 36" class="circular-chart">
+                    <svg viewBox="0 0 36 36" width="150" height="150" class="circular-chart" role="img" aria-label="Result progress chart">
                         <path class="circle-bg" stroke-dasharray="100, 100"
                             d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
                         <path id="score-circle-path" class="circle" stroke-dasharray="0, 100"

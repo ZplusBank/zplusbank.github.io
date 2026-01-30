@@ -192,6 +192,8 @@ body {
 .hero {
     text-align: center;
     padding: 6rem 0 4rem;
+    /* prevent layout shift (LCP jump) when fonts or content load */
+    min-height: calc(100vh - var(--navbar-height) - 3rem);
 }
 
 .hero h1 {
@@ -304,7 +306,7 @@ body {
     background: #0f172a;
     padding: 1.5rem;
     border-radius: var(--radius-md);
-    font-family: 'Fira Code', monospace;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
     color: #e2e8f0;
     margin-bottom: 2rem;
     overflow-x: auto;
@@ -367,20 +369,17 @@ body {
 }
 
 /* RTL adjustments */
-:root:dir(rtl) .search-container i.fas.fa-search,
 :root[dir="rtl"] .search-container i.fas.fa-search {
     left: auto !important;
     right: 15px !important;
 }
 
-:root:dir(rtl) .search-container input,
 :root[dir="rtl"] .search-container input {
     padding: 12px 45px 12px 20px !important;
     /* swap padding for RTL */
 }
 
 /* Reverse exam controls order in RTL */
-:root:dir(rtl) .exam-controls,
 :root[dir="rtl"] .exam-controls {
     flex-direction: row-reverse;
 }
