@@ -53,15 +53,8 @@ body {
     cursor: pointer;
     transition: all 0.2s ease;
     font-family: var(--font-main);
-}
-
-.btn-primary {
-    background: var(--gradient-primary);
-    color: white;
-    box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.5);
-}
-
-.btn-primary:hover {
+    min-height: 44px;
+    /* Improve touch target on mobile */
     transform: translateY(-2px);
     box-shadow: 0 6px 8px -1px rgba(59, 130, 246, 0.6);
 }
@@ -123,320 +116,328 @@ body {
     margin-left: 1.5rem;
     font-weight: 500;
     transition: color 0.2s;
-}
-
-.nav-links a:hover,
-.nav-links a.active {
-    color: var(--accent-color);
-}
-
-/* Search box inside sections view */
-.search-box {
-    position: relative;
-}
-
-.search-icon {
-    position: absolute;
-    left: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #64748b;
-}
-
-.search-input {
-    width: 100%;
-    padding: 0.75rem 1.25rem 0.75rem 2.75rem;
-    border-radius: 0.75rem;
-    border: 1px solid #e2e8f0;
-    background: #f8fafc;
-    font-size: 1rem;
-    transition: all 0.3s;
-}
-
-/* Accessible focus: do not remove outline; provide visible focus ring */
-:focus-visible {
-    outline: 3px solid rgba(59, 130, 246, 0.6);
-    outline-offset: 2px;
-}
-
-/* Visually hidden utility for labels and skip links */
-.visually-hidden {
-    position: absolute !important;
-    height: 1px;
-    width: 1px;
-    overflow: hidden;
-    clip: rect(1px, 1px, 1px, 1px);
-    white-space: nowrap;
-    /* added line */
-}
-
-/* Skip link visible on focus */
-.skip-link {
-    position: absolute;
-    left: 1rem;
-    top: 0.75rem;
-    background: #fff;
-    color: #0f172a;
     padding: 0.5rem 0.75rem;
-    border-radius: 6px;
-    z-index: 9999;
-    transform: translateY(-120%);
-    transition: transform 0.15s ease;
+    /* Larger tap target */
+    border-radius: 0.375rem;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
 }
 
-.skip-link:focus {
-    transform: translateY(0);
-}
-
-/* Home View */
-.hero {
-    text-align: center;
-    padding: 6rem 0 4rem;
-}
-
-.hero h1 {
-    font-size: 3.5rem;
-    line-height: 1.1;
-    margin-bottom: 1.5rem;
-}
-
-.hero .gradient-text {
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.subtitle {
-    font-size: 1.25rem;
+.github-link {
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.375rem;
+    display: inline-flex;
+    align-items: center;
     color: var(--text-secondary);
-    max-width: 600px;
-    margin: 0 auto 2.5rem;
-}
 
-.subjects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-bottom: 4rem;
-}
+    /* Search box inside sections view */
+    .search-box {
+        position: relative;
+    }
 
-.subject-card {
-    background: var(--card-bg);
-    border: 1px solid #334155;
-    border-radius: var(--radius-lg);
-    padding: 2rem;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-}
+    .search-icon {
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #64748b;
+    }
 
-.subject-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--accent-color);
-    box-shadow: var(--shadow-lg);
-}
+    .search-input {
+        width: 100%;
+        padding: 0.75rem 1.25rem 0.75rem 2.75rem;
+        border-radius: 0.75rem;
+        border: 1px solid #e2e8f0;
+        background: #f8fafc;
+        font-size: 1rem;
+        transition: all 0.3s;
+    }
 
-.subject-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-}
+    /* Accessible focus: do not remove outline; provide visible focus ring */
+    :focus-visible {
+        outline: 3px solid rgba(59, 130, 246, 0.6);
+        outline-offset: 2px;
+    }
 
-.subject-card p {
-    color: var(--text-secondary);
-}
+    /* Visually hidden utility for labels and skip links */
+    .visually-hidden {
+        position: absolute !important;
+        height: 1px;
+        width: 1px;
+        overflow: hidden;
+        clip: rect(1px, 1px, 1px, 1px);
+        white-space: nowrap;
+        /* added line */
+    }
 
-/* Exam View */
-.exam-header {
-    background: var(--card-bg);
-    padding: 1rem 2rem;
-    border-radius: var(--radius-md);
-    margin: 2rem 0;
-    border: 1px solid #334155;
-}
+    /* Skip link visible on focus */
+    .skip-link {
+        position: absolute;
+        left: 1rem;
+        top: 0.75rem;
+        background: #fff;
+        color: #0f172a;
+        padding: 0.5rem 0.75rem;
+        border-radius: 6px;
+        z-index: 9999;
+        transform: translateY(-120%);
+        transition: transform 0.15s ease;
+    }
 
-.exam-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1rem;
-}
+    .skip-link:focus {
+        transform: translateY(0);
+    }
 
-.timer-badge {
-    background: rgba(59, 130, 246, 0.1);
-    color: var(--accent-color);
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-weight: 600;
-    font-family: monospace;
-    font-size: 1.2rem;
-}
+    /* Home View */
+    .hero {
+        text-align: center;
+        padding: 6rem 0 4rem;
+    }
 
-.progress-bar {
-    height: 6px;
-    background: #334155;
-    border-radius: 3px;
-    overflow: hidden;
-}
+    .hero h1 {
+        font-size: 3.5rem;
+        line-height: 1.1;
+        margin-bottom: 1.5rem;
+    }
 
-#progress-fill {
-    height: 100%;
-    background: var(--gradient-primary);
-    transition: width 0.3s ease;
-}
+    .hero .gradient-text {
+        background: var(--gradient-primary);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
 
-.question-container {
-    background: var(--card-bg);
-    border-radius: var(--radius-lg);
-    padding: 3rem;
-    margin-bottom: 2rem;
-    border: 1px solid #334155;
-    min-height: 400px;
-}
+    .subtitle {
+        font-size: 1.25rem;
+        color: var(--text-secondary);
+        max-width: 600px;
+        margin: 0 auto 2.5rem;
+    }
 
-.question-text {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-    font-weight: 600;
-}
+    .subjects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-bottom: 4rem;
+    }
 
-.code-block {
-    background: #0f172a;
-    padding: 1.5rem;
-    border-radius: var(--radius-md);
-    font-family: 'Fira Code', monospace;
-    color: #e2e8f0;
-    margin-bottom: 2rem;
-    overflow-x: auto;
-    border: 1px solid #334155;
-}
+    .subject-card {
+        background: var(--card-bg);
+        border: 1px solid #334155;
+        border-radius: var(--radius-lg);
+        padding: 2rem;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+    }
 
-.options-grid {
-    display: grid;
-    gap: 1rem;
-}
+    .subject-card:hover {
+        transform: translateY(-5px);
+        border-color: var(--accent-color);
+        box-shadow: var(--shadow-lg);
+    }
 
-.option-card {
-    background: #0f172a;
-    padding: 1rem 1.5rem;
-    border-radius: var(--radius-md);
-    border: 2px solid transparent;
-    /* Prepare for selected state */
-    cursor: pointer;
-    transition: all 0.2s;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
+    .subject-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
 
-.option-card:hover {
-    background: #1e293b;
-}
+    .subject-card p {
+        color: var(--text-secondary);
+    }
 
-.option-card.selected {
-    border-color: var(--accent-color);
-    background: rgba(59, 130, 246, 0.1);
-}
+    /* Exam View */
+    .exam-header {
+        background: var(--card-bg);
+        padding: 1rem 2rem;
+        border-radius: var(--radius-md);
+        margin: 2rem 0;
+        border: 1px solid #334155;
+    }
 
-.option-marker {
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    border: 2px solid #475569;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+    .exam-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
 
-.option-card.selected .option-marker {
-    border-color: var(--accent-color);
-    background: var(--accent-color);
-}
+    .timer-badge {
+        background: rgba(59, 130, 246, 0.1);
+        color: var(--accent-color);
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        font-weight: 600;
+        font-family: monospace;
+        font-size: 1.2rem;
+    }
 
-.option-card.selected .option-marker::after {
-    content: '';
-    width: 8px;
-    height: 8px;
-    background: white;
-    border-radius: 50%;
-}
+    .progress-bar {
+        height: 6px;
+        background: #334155;
+        border-radius: 3px;
+        overflow: hidden;
+    }
 
-.exam-controls {
-    display: flex;
-    justify-content: space-between;
-}
+    #progress-fill {
+        height: 100%;
+        background: var(--gradient-primary);
+        transition: width 0.3s ease;
+    }
 
-/* RTL adjustments */
-:root:dir(rtl) .search-container i.fas.fa-search,
-:root[dir="rtl"] .search-container i.fas.fa-search {
-    left: auto !important;
-    right: 15px !important;
-}
+    .question-container {
+        background: var(--card-bg);
+        border-radius: var(--radius-lg);
+        padding: 3rem;
+        margin-bottom: 2rem;
+        border: 1px solid #334155;
+        min-height: 400px;
+    }
 
-:root:dir(rtl) .search-container input,
-:root[dir="rtl"] .search-container input {
-    padding: 12px 45px 12px 20px !important;
-    /* swap padding for RTL */
-}
+    .question-text {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        font-weight: 600;
+    }
 
-/* Reverse exam controls order in RTL */
-:root:dir(rtl) .exam-controls,
-:root[dir="rtl"] .exam-controls {
-    flex-direction: row-reverse;
-}
+    .code-block {
+        background: #0f172a;
+        padding: 1.5rem;
+        border-radius: var(--radius-md);
+        font-family: 'Fira Code', monospace;
+        color: #e2e8f0;
+        margin-bottom: 2rem;
+        overflow-x: auto;
+        border: 1px solid #334155;
+    }
 
-/* Results View */
-.results-card {
-    background: var(--card-bg);
-    border-radius: var(--radius-lg);
-    padding: 4rem 2rem;
-    text-align: center;
-    max-width: 600px;
-    margin: 4rem auto;
-    border: 1px solid #334155;
-}
+    .options-grid {
+        display: grid;
+        gap: 1rem;
+    }
 
-.score-circle {
-    width: 150px;
-    margin: 0 auto 2rem;
-}
+    .option-card {
+        background: #0f172a;
+        padding: 1rem 1.5rem;
+        border-radius: var(--radius-md);
+        border: 2px solid transparent;
+        /* Prepare for selected state */
+        cursor: pointer;
+        transition: all 0.2s;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
 
-.circular-chart {
-    display: block;
-    margin: 10px auto;
-    max-width: 80%;
-    max-height: 250px;
-}
+    .option-card:hover {
+        background: #1e293b;
+    }
 
-.circle-bg {
-    fill: none;
-    stroke: #334155;
-    stroke-width: 3.8;
-}
+    .option-card.selected {
+        border-color: var(--accent-color);
+        background: rgba(59, 130, 246, 0.1);
+    }
 
-.circle {
-    fill: none;
-    stroke-width: 2.8;
-    stroke-linecap: round;
-    transition: stroke-dasharray 1s ease-out;
-}
+    .option-marker {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        border: 2px solid #475569;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-.percentage {
-    fill: var(--text-primary);
-    font-family: var(--font-main);
-    font-weight: bold;
-    font-size: 0.5em;
-    text-anchor: middle;
-}
+    .option-card.selected .option-marker {
+        border-color: var(--accent-color);
+        background: var(--accent-color);
+    }
 
-.results-card h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
+    .option-card.selected .option-marker::after {
+        content: '';
+        width: 8px;
+        height: 8px;
+        background: white;
+        border-radius: 50%;
+    }
 
-.result-actions {
-    margin-top: 2rem;
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-}
+    .exam-controls {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /* RTL adjustments */
+    :root:dir(rtl) .search-container i.fas.fa-search,
+    :root[dir="rtl"] .search-container i.fas.fa-search {
+        left: auto !important;
+        right: 15px !important;
+    }
+
+    :root:dir(rtl) .search-container input,
+    :root[dir="rtl"] .search-container input {
+        padding: 12px 45px 12px 20px !important;
+        /* swap padding for RTL */
+    }
+
+    /* Reverse exam controls order in RTL */
+    :root:dir(rtl) .exam-controls,
+    :root[dir="rtl"] .exam-controls {
+        flex-direction: row-reverse;
+    }
+
+    /* Results View */
+    .results-card {
+        background: var(--card-bg);
+        border-radius: var(--radius-lg);
+        padding: 4rem 2rem;
+        text-align: center;
+        max-width: 600px;
+        margin: 4rem auto;
+        border: 1px solid #334155;
+    }
+
+    .score-circle {
+        width: 150px;
+        margin: 0 auto 2rem;
+    }
+
+    .circular-chart {
+        display: block;
+        margin: 10px auto;
+        max-width: 80%;
+        max-height: 250px;
+    }
+
+    .circle-bg {
+        fill: none;
+        stroke: #334155;
+        stroke-width: 3.8;
+    }
+
+    .circle {
+        fill: none;
+        stroke-width: 2.8;
+        stroke-linecap: round;
+        transition: stroke-dasharray 1s ease-out;
+    }
+
+    .percentage {
+        fill: var(--text-primary);
+        font-family: var(--font-main);
+        font-weight: bold;
+        font-size: 0.5em;
+        text-anchor: middle;
+    }
+
+    .results-card h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .result-actions {
+        margin-top: 2rem;
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+    }
