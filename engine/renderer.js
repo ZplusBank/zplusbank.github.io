@@ -72,16 +72,26 @@ function renderSubjects(subjects) {
         subjects.forEach(subject => {
             const card = document.createElement('div');
             card.className = 'subject-card';
+            card.setAttribute('role', 'button');
+            card.tabIndex = 0; // keyboard focusable
             card.innerHTML = `
-                <h3><i class="fas fa-book"></i> ${escapeHtml(subject.name)}</h3>
+                <h3><i class="fas fa-book" aria-hidden="true"></i> ${escapeHtml(subject.name)}</h3>
                 <p>${escapeHtml(subject.description)}</p>
             `;
 
-            card.addEventListener('click', () => {
+            const activate = () => {
                 if (subject.externalLink) {
                     window.location.href = subject.externalLink;
                 } else {
                     alert('No exam link configured for this subject.');
+                }
+            };
+
+            card.addEventListener('click', activate);
+            card.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    activate();
                 }
             });
 

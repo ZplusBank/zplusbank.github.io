@@ -34,6 +34,8 @@
 
 <body>
 
+    <a href="#app" class="skip-link">Skip to content</a>
+
     <!-- App Loader -->
     <div id="app-loader">
         <div class="loader-content">
@@ -43,18 +45,16 @@
     </div>
 
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Primary navigation">
         <div class="container nav-content">
-            <div class="logo">
-                <span
-                    style="background: white; color: #0f172a; padding: 2px 10px; border-radius: 8px; margin-right: 8px; font-weight: 900; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">Z+</span>
+            <a href="#app" class="logo" id="logo-link" aria-label="Home">
+                <span class="logo-mark" style="background: white; color: #0f172a; padding: 0.125rem 0.625rem; border-radius: 8px; margin-right: 0.5rem; font-weight: 900; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">Z+</span>
                 <span>Exam<span class="highlight">Platform</span></span>
-            </div>
+            </a>
             <div class="nav-links">
                 <a href="#" id="nav-home" class="active" data-i18n="home">Home</a>
                 <a href="#" id="nav-subjects" data-i18n="sections">Sections</a>
-                <button id="langToggle" class="btn-secondary"
-                    style="padding: 5px 15px; font-size: 0.9rem;">عربي</button>
+                <button id="langToggle" class="btn-secondary" style="padding: 0.3125rem 0.9375rem; font-size: 0.9rem;">عربي</button>
                 <a href="https://github.com/ZplusBank/zplusbank.github.io" target="_blank" class="github-link"><i
                         class="fab fa-github"></i></a>
             </div>
@@ -82,10 +82,11 @@
             <div class="section-header" style="margin-bottom: 2rem; text-align: center;">
                 <h2 data-i18n="sections">Sections</h2>
                 <div class="search-container" style="max-width: 500px; margin: 1rem auto; padding: 0 1rem;">
-                    <div class="search-box">
-                        <i class="fas fa-search search-icon"></i>
-                        <input class="search-input" type="text" id="section-search" placeholder="Search exams...">
-                    </div>
+                        <div class="search-box">
+                            <label for="section-search" class="visually-hidden">Search sections</label>
+                            <i class="fas fa-search search-icon" aria-hidden="true"></i>
+                            <input class="search-input" type="text" id="section-search" placeholder="Search exams...">
+                        </div>
                 </div>
             </div>
 
@@ -213,6 +214,15 @@
         // Init Language
         const savedLang = localStorage.getItem('lang') || 'ar';
         setLanguage(savedLang);
+    </script>
+    <script>
+        // Global keyboard helpers: allow closing popups/menus with Escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                // close common UI elements by removing .open or .active classes
+                document.querySelectorAll('.modal.open, .dropdown.open, .menu.open').forEach(el => el.classList.remove('open'));
+            }
+        });
     </script>
     <script type="module">
         // Main entry point logic can go here or in a main.js
