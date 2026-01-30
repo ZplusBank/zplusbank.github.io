@@ -73,8 +73,8 @@ function renderSubjects(subjects) {
             const card = document.createElement('div');
             card.className = 'subject-card';
             card.innerHTML = `
-                <h3><i class="fas fa-book"></i> ${subject.name}</h3>
-                <p>${subject.description}</p>
+                <h3><i class="fas fa-book"></i> ${escapeHtml(subject.name)}</h3>
+                <p>${escapeHtml(subject.description)}</p>
             `;
 
             card.addEventListener('click', () => {
