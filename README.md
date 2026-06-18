@@ -7,6 +7,9 @@ This repository catches all legacy incoming traffic and consolidates it down to 
 * `https://zplusbank.github.io/anything` ➡️ `https://zplus.codes`
 * `https://github.io` ➡️ `https://zplus.codes`
 
+* [zplus.codes](https://zplus.codes)
+
+
 ---
 
 ## 🛠️ How It Works
